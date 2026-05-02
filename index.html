@@ -1,313 +1,163 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mein persönlicher Blog</title>
-  <meta name="description" content="Ein persönlicher Blog über Gedanken, Alltag und Ideen." />
-  <style>
-    :root {
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mein Blog</title>
+
+<style>
+:root {
   --bg: #f6f1ea;
   --card: #ffffff;
   --text: #1f1f1f;
   --muted: #6f6a64;
   --accent: #7c3aed;
-  --accent-dark: #5b21b6;
   --border: #e7ddd1;
 }
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    header {
-      padding: 28px 20px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav {
-      max-width: 980px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: -0.03em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover { color: var(--accent); }
-
-    .hero {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 72px 20px 44px;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 4.8rem);
-      line-height: 0.98;
-      letter-spacing: -0.08em;
-      margin: 0 0 20px;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 0 28px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 18px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: white;
-      font-weight: 700;
-      box-shadow: 0 10px 24px rgba(139, 92, 246, 0.25);
-    }
-
-    .button:hover { background: var(--accent-dark); }
-
-    .profile-card {
-  background: linear-gradient(180deg, #ffffff, #faf7f2);
-  border: 1px solid var(--border);
-  border-radius: 32px;
-  padding: 28px;
-  box-shadow: 0 24px 60px rgba(33, 33, 33, 0.12);
-}
-
-    .avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #8b5cf6, #f59e0b);
-      margin-bottom: 18px;
-    }
-
-</section>
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 20px 72px;
-    }
-
-    .section-title {
-      font-size: 1.7rem;
-      letter-spacing: -0.04em;
-      margin: 22px 0;
-    }
-
-    .posts {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-   article {
-  background: linear-gradient(180deg, #ffffff, #fbf8f3);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-}
-
-    article:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(33, 33, 33, 0.08);
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #eee7ff;
-      color: var(--accent-dark);
-      font-size: 0.78rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    article h3 {
-      margin: 0 0 10px;
-      font-size: 1.25rem;
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-    }
-
-    article p { color: var(--muted); margin: 0 0 16px; }
-
-    .date { color: var(--muted); font-size: 0.88rem; }
-
-    .about, .contact {
-      margin-top: 28px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 28px;
-    }
-
-    #songs article {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 16px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, #ffffff, #f7f3ee);
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-#songs audio {
-  width: 100%;
-  margin-top: 5px;
-}
-
-#songs h3 {
+body {
   margin: 0;
-  font-size: 1.1rem;
+  font-family: system-ui;
+  background: var(--bg);
+  color: var(--text);
 }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 36px 20px;
-      border-top: 1px solid var(--border);
-    }
 
-    @media (max-width: 760px) {
-      nav { align-items: flex-start; flex-direction: column; }
-      .hero { grid-template-columns: 1fr; padding-top: 48px; }
-      .posts { grid-template-columns: 1fr; }
-      .nav-links { flex-wrap: wrap; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <a class="logo" href="#">Mein Blog</a>
-      <div class="nav-links">
-        <a href="#beitraege">Beiträge</a>
-        <a href="#ueber-mich">Über mich</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-    </nav>
-  </header>
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 
-  <section class="hero">
-    <div>
-      <h1>Gedanken, Geschichten & kleine Ideen.</h1>
-      <p>Willkommen auf meinem persönlichen Blog. Hier schreibe ich über Dinge, die mich beschäftigen: Alltag, Lernen, Kreativität und alles dazwischen.</p>
-      <a class="button" href="#beitraege">Beiträge lesen</a>
-    </div>
-
-    <aside class="profile-card">
-      <img src="portrait-lothar.jpg" style="width:100px; height:100px; border-radius:50%; object-fit:cover; margin-bottom:15px;">
-      <h2>Hallo! Ich bin Lothar Schweigerer.</h2>
-      <p>Ich schreibe Texte und Songs über Themen, die mich beschäftigen.</p>
-    </aside>
-  </section>
-
-  <section id="songs" class="about">
-  <h2>Meine Songs</h2>
-
-  <article>
-    <h3>Mein erster Song</h3>
-    <audio controls>
-      <source src="song1.mp3" type="audio/mpeg">
-    </audio>
-  </article>
-
-  <article>
-    <h3>Mein zweiter Song</h3>
-    <audio controls>
-      <source src="song2.mp3" type="audio/mpeg">
-    </audio>
-  </article>
-</section>
-
-  #songs {
+.hero {
+  padding: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.button {
+  background: var(--accent);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.profile-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+/* BLOG */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
 
-  #songs h2 {
+article {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 20px;
+}
+
+/* SONGS */
+#songs {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+#songs h2 {
   grid-column: 1 / -1;
 }
-  
+
+#songs article {
+  padding: 15px;
+}
+
+audio {
+  width: 100%;
+}
+
+@media(max-width:700px){
+  .hero {grid-template-columns:1fr;}
+  .posts {grid-template-columns:1fr;}
+  #songs {grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Mein Blog</h2>
+<div>Beiträge | Songs | Kontakt</div>
+</header>
+
+<section class="hero">
+<div>
+<h1>Gedanken & Songs</h1>
+<p>Ich schreibe über Dinge, die mich beschäftigen und teile meine Musik.</p>
+<button class="button">Beiträge lesen</button>
+</div>
+
+<div class="profile-card">
+<img src="portrait-lothar.jpg" style="width:100px; border-radius:50%;">
+<h3>Hi, ich bin Lothar</h3>
+<p>Ich schreibe Texte und Songs über Themen, die mich beschäftigen.</p>
+</div>
+</section>
+
+<main>
+
+<section id="songs">
+<h2>Meine Songs</h2>
+
+<article>
+<h3>Mein erster Song</h3>
+<audio controls>
+<source src="song1.mp3">
+</audio>
+</article>
+
+<article>
+<h3>Mein zweiter Song</h3>
+<audio controls>
+<source src="song2.mp3">
+</audio>
+</article>
+
+</section>
+
+<h2>Neueste Beiträge</h2>
+
+<div class="posts">
+
+<article>
+<img src="portrait-lothar.jpg" style="width:100%; border-radius:10px;">
+<h3>Warum ich diesen Blog starte</h3>
+<p>Ich möchte meine Gedanken und Erfahrungen teilen.</p>
+</article>
+
+<article>
+<h3>Was ich diese Woche gelernt habe</h3>
+<p>Kleine Erkenntnisse aus meinem Alltag.</p>
+</article>
+
+<article>
+<h3>Warum Schreiben hilft</h3>
+<p>Schreiben hilft, Gedanken zu ordnen.</p>
+</article>
+
+</div>
+
 </main>
-  <main>
-    <section id="beitraege">
-      <h2 class="section-title">Neueste Beiträge</h2>
-      <div class="posts">
-        <article>
-          <img src="portrait-lothar.jpg" style="width:100%; border-radius:12px; margin-bottom:10px;">
-          <span class="tag">Alltag</span>
-          <h3>Warum ich diesen Blog starte</h3>
-          <p>Ich möchte meine Gedanken ordnen, mein Leben rekapitulieren und Erfahrungen weitergeben.</p>
-          <span class="date">2. Mai 2026</span>
-        </article>
 
-        <article>
-          <span class="tag">Gedanken</span>
-          <h3>Was ich diese Woche gelernt habe</h3>
-          <p>Kleine Erkenntnisse, gute Fragen und Momente, die hängen geblieben sind.</p>
-          <span class="date">2. Mai 2026</span>
-        </article>
-
-        <article>
-          <span class="tag">Kreativität</span>
-          <h3>Warum Schreiben hilft</h3>
-          <p>Manchmal versteht man seine Gedanken erst, wenn man sie aufschreibt.</p>
-          <span class="date">2. Mai 2026</span>
-        </article>
-      </div>
-    </section>
-
-    <section id="ueber-mich" class="about">
-      <h2>Über mich</h2>
-      <p>Ich interessiere mich für Gesundheit, Lebensqualität, meine Freunde und Familie. Ich möchte meine Gedanken mitteilen und andere zum Nachdenken anregen.</p>
-    </section>
-
-    <section id="kontakt" class="contact">
-      <h2>Kontakt</h2>
-      <p>Du erreichst mich per E-Mail: <a href="mailto:deine@email.de">deine@email.de</a></p>
-    </section>
-  </main>
-
-  <footer>
-    © 2026 Dein Name · Persönlicher Blog
-  </footer>
 </body>
 </html>
