@@ -31,8 +31,16 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
-.site-title h2 { margin: 0; }
-.site-name { margin: 2px 0 0; color: #666; }
+.site-title h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.site-name {
+  margin: 2px 0 0;
+  font-size: 16px;
+  color: #666;
+}
 
 nav a {
   margin-left: 15px;
@@ -41,16 +49,74 @@ nav a {
   font-weight: 500;
 }
 
+/* HERO */
 .hero {
   padding: 60px 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.profile-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.profile-card img {
+  width: 100px;
+  border-radius: 50%;
 }
 
 main {
   padding: 24px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
+/* SONGS */
+.songs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 24px;
+}
+
+.song-card {
+  width: 260px;
+  background: #181818;
+  color: white;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.cover {
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(29,185,84,0.9);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* BLOG */
 .posts {
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -58,12 +124,13 @@ main {
 }
 
 article {
-  background: white;
-  padding: 20px;
+  background: var(--card);
+  padding: 15px;
   border-radius: 20px;
 }
 
 @media(max-width:700px){
+  .hero {grid-template-columns:1fr;}
   .posts {grid-template-columns:1fr;}
 }
 </style>
@@ -84,25 +151,87 @@ article {
 </header>
 
 <section class="hero">
+<div>
 <h1>Was mich bewegt</h1>
-<p>Ich schreibe über das, was mich im Leben beschäftigt.</p>
+<p>Ich schreibe und musiziere über Dinge, die mich beschäftigen.</p>
+</div>
+
+<div class="profile-card">
+<img src="portrait-lothar.jpg">
+<h3>Hallo!</h3>
+<p>Ich heisse Lothar Schweigerer.</p>
+</div>
 </section>
 
 <main>
 
+<h2>Meine Songs</h2>
+
+<div class="songs-grid">
+
+<div class="song-card">
+  <div class="cover">
+    <img src="luegen-klauen.jpg">
+    <div class="play-button" onclick="playSong('song1')">▶</div>
+  </div>
+  <h3>Lügen, Klauen und Zerstören</h3>
+  <p>Mai 2026</p>
+  <audio id="song1" controls>
+    <source src="luegen-klauen.mp3">
+  </audio>
+</div>
+
+<div class="song-card">
+  <div class="cover">
+    <img src="denn-du-bleibst.jpeg">
+    <div class="play-button" onclick="playSong('song2')">▶</div>
+  </div>
+  <h3>Denn du bleibst</h3>
+  <p>April 2025</p>
+  <audio id="song2" controls>
+    <source src="denn-du-bleibst.mp3">
+  </audio>
+</div>
+
+<div class="song-card">
+  <div class="cover">
+    <img src="nur-ein-mensch-cash.jpg">
+    <div class="play-button" onclick="playSong('song3')">▶</div>
+  </div>
+  <h3>Nur ein Mensch</h3>
+  <p>Juli 2025</p>
+  <audio id="song3" controls>
+    <source src="nur-ein-mensch-cash.mp3">
+  </audio>
+</div>
+
+</div>
+
 <h2>Rubriken</h2>
 
 <div class="posts">
-
 <article>
   <h3>Meine Gegenwart</h3>
   <p>Aktuelle Gedanken und Erfahrungen.</p>
   <a href="gegenwart.html">Zur Seite →</a>
 </article>
-
 </div>
 
 </main>
+
+<script>
+function playSong(id) {
+  const audios = document.querySelectorAll("audio");
+  audios.forEach(a => {
+    if(a.id !== id){
+      a.pause();
+      a.currentTime = 0;
+    }
+  });
+  const current = document.getElementById(id);
+  current.paused ? current.play() : current.pause();
+}
+</script>
 
 </body>
 </html>
