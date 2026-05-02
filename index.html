@@ -157,10 +157,12 @@ article img {
     <img src="luegen-klauen.jpg">
     <div class="play-button" onclick="document.getElementById('song1').play()">▶</div>
   </div>
+
   <h3>Mein erster Song</h3>
-<audio controls>
-  <source src="luegen-klauen.mp3" type="audio/mpeg">
-</audio>
+
+  <audio id="song1" controls preload="metadata">
+    <source src="luegen-klauen.mp3" type="audio/mpeg">
+  </audio>
 </div>
 
 <div class="song-card">
