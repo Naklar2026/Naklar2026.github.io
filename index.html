@@ -1,5 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Echte Worte. Echte Songs.</title>
+
+<style>
+:root {
+  --bg: #f6f1ea;
+  --card: #ffffff;
+  --text: #1f1f1f;
+  --muted: #6f6a64;
+  --accent: #7c3aed;
+  --border: #e7ddd1;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.site-name {
+  margin: 2px 0 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.profile-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.profile-card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+main {
+  padding: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* SONGS */
+.songs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 24px;
+}
+
+.song-card {
+  width: 260px;
+  background: #181818;
+  color: white;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.cover {
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 12px;
-  background: #000;
 }
 
 .play-button {
@@ -29,12 +120,12 @@
   margin: 10px 0;
 }
 
-  .song-date {
+.song-date {
   margin: 0;
   font-size: 14px;
   color: #b3b3b3;
 }
-  
+
 /* BLOG */
 .posts {
   display: grid;
@@ -63,13 +154,16 @@ article img {
 <body>
 
 <header>
-<h2>Echte Worte. Echte Songs.</h2>
-<div>Beiträge | Songs | Kontakt</div>
+  <div class="site-title">
+    <h2>Echte Worte. Echte Songs.</h2>
+    <p class="site-name">Lothar Schweigerer</p>
+  </div>
+  <div>Beiträge | Songs | Kontakt</div>
 </header>
 
 <section class="hero">
 <div>
-<h1>Gedanken & Songs</h1>
+<h1>Was mich bewegt</h1>
 <p>Ich schreibe und musiziere über Dinge, die mich beschäftigen.</p>
 </div>
 
@@ -93,8 +187,7 @@ article img {
     <div class="play-button" onclick="playSong('song1')">▶</div>
   </div>
   <h3>Lügen, Klauen und Zerstören</h3>
-<p class="song-date">Mai 2026</p>
-
+  <p class="song-date">Mai 2026</p>
   <audio id="song1" controls preload="metadata">
     <source src="luegen-klauen.mp3" type="audio/mpeg">
   </audio>
@@ -106,25 +199,21 @@ article img {
     <img src="denn-du-bleibst.jpeg">
     <div class="play-button" onclick="playSong('song2')">▶</div>
   </div>
-
   <h3>Denn du bleibst (in dieser Welt)</h3>
   <p class="song-date">April 2025</p>
-
   <audio id="song2" controls preload="metadata">
     <source src="denn-du-bleibst.mp3" type="audio/mpeg">
   </audio>
 </div>
 
-  <!-- SONG 3 -->
+<!-- SONG 3 -->
 <div class="song-card">
   <div class="cover">
     <img src="nur-ein-mensch-cash.jpg">
     <div class="play-button" onclick="playSong('song3')">▶</div>
   </div>
-
   <h3>Nur ein Mensch (Cash)</h3>
   <p class="song-date">Juli 2025</p>
-
   <audio id="song3" controls preload="metadata">
     <source src="nur-ein-mensch-cash.mp3" type="audio/mpeg">
   </audio>
@@ -156,12 +245,10 @@ article img {
 
 </main>
 
-<!-- SCRIPT -->
 <script>
 function playSong(id) {
   const audios = document.querySelectorAll("audio");
 
-  // Alle anderen stoppen
   audios.forEach(audio => {
     if (audio.id !== id) {
       audio.pause();
@@ -171,7 +258,6 @@ function playSong(id) {
 
   const current = document.getElementById(id);
 
-  // Toggle Play / Pause
   if (current.paused) {
     current.play();
   } else {
