@@ -5,6 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mein Blog</title>
 
+/* SPOTIFY LOOK */
+.song-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 15px;
+  align-items: center;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.song-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.song-card h3 {
+  margin: 0 0 8px;
+}
+  
 <style>
 :root {
   --bg: #f6f1ea;
@@ -117,21 +141,30 @@ audio {
 <main>
 
 <section id="songs">
-<h2>Meine Songs</h2>
+<section id="songs">
+  <h2>Meine Songs</h2>
 
-<article>
-<h3>Mein erster Song</h3>
-<audio controls>
-<source src="song1.mp3">
-</audio>
-</article>
+  <div class="song-card">
+    <img src="portrait-lothar.jpg">
+    <div>
+      <h3>Mein erster Song</h3>
+      <audio controls>
+        <source src="song1.mp3">
+      </audio>
+    </div>
+  </div>
 
-<article>
-<h3>Mein zweiter Song</h3>
-<audio controls>
-<source src="song2.mp3">
-</audio>
-</article>
+  <div class="song-card">
+    <img src="portrait-lothar.jpg">
+    <div>
+      <h3>Mein zweiter Song</h3>
+      <audio controls>
+        <source src="song2.mp3">
+      </audio>
+    </div>
+  </div>
+
+</section>
 
 </section>
 
