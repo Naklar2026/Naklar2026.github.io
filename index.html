@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein persönlicher Blog</title>
+  <meta name="description" content="Ein persönlicher Blog über Gedanken, Alltag und Ideen." />
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --card: #ffffff;
+      --text: #232323;
+      --muted: #6b6b6b;
+      --accent: #8b5cf6;
+      --accent-dark: #6d28d9;
+      --border: #e8e1d8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      padding: 28px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 72px 20px 44px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      margin: 0 0 20px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 0 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(139, 92, 246, 0.25);
+    }
+
+    .button:hover { background: var(--accent-dark); }
+
+    .profile-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(33, 33, 33, 0.08);
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8b5cf6, #f59e0b);
+      margin-bottom: 18px;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px 72px;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      letter-spacing: -0.04em;
+      margin: 22px 0;
+    }
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    article:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(33, 33, 33, 0.08);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #eee7ff;
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    article h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+    }
+
+    article p { color: var(--muted); margin: 0 0 16px; }
+
+    .date { color: var(--muted); font-size: 0.88rem; }
+
+    .about, .contact {
+      margin-top: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 36px 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 760px) {
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero { grid-template-columns: 1fr; padding-top: 48px; }
+      .posts { grid-template-columns: 1fr; }
+      .nav-links { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="#">Mein Blog</a>
+      <div class="nav-links">
+        <a href="#beitraege">Beiträge</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Gedanken, Geschichten & kleine Ideen.</h1>
+      <p>Willkommen auf meinem persönlichen Blog. Hier schreibe ich über Dinge, die mich beschäftigen: Alltag, Lernen, Kreativität und alles dazwischen.</p>
+      <a class="button" href="#beitraege">Beiträge lesen</a>
+    </div>
+
+    <aside class="profile-card">
+      <div class="avatar" aria-hidden="true"></div>
+      <h2>Hi, ich bin Dein Name.</h2>
+      <p>Ich schreibe, beobachte und teile Gedanken aus meinem Alltag.</p>
+    </aside>
+  </section>
+
+  <main>
+    <section id="beitraege">
+      <h2 class="section-title">Neueste Beiträge</h2>
+      <div class="posts">
+        <article>
+          <span class="tag">Alltag</span>
+          <h3>Mein erster Blogbeitrag</h3>
+          <p>Ein kurzer Einstieg: Warum ich diesen Blog starte und worüber ich schreiben möchte.</p>
+          <span class="date">2. Mai 2026</span>
+        </article>
+
+        <article>
+          <span class="tag">Gedanken</span>
+          <h3>Was ich diese Woche gelernt habe</h3>
+          <p>Kleine Erkenntnisse, gute Fragen und Momente, die hängen geblieben sind.</p>
+          <span class="date">2. Mai 2026</span>
+        </article>
+
+        <article>
+          <span class="tag">Kreativität</span>
+          <h3>Warum Schreiben hilft</h3>
+          <p>Manchmal versteht man seine Gedanken erst, wenn man sie aufschreibt.</p>
+          <span class="date">2. Mai 2026</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="ueber-mich" class="about">
+      <h2>Über mich</h2>
+      <p>Schreibe hier ein paar Sätze über dich: Wer du bist, was dich interessiert und warum du bloggst.</p>
+    </section>
+
+    <section id="kontakt" class="contact">
+      <h2>Kontakt</h2>
+      <p>Du erreichst mich per E-Mail: <a href="mailto:deine@email.de">deine@email.de</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Dein Name · Persönlicher Blog
+  </footer>
+</body>
+</html>
