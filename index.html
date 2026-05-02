@@ -1,200 +1,247 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mein Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mein Blog</title>
 
-/* SPOTIFY LOOK */
-.song-card {
-  width: 280px;
-  background: #181818;
-  color: white;
-  padding: 16px;
-  border-radius: 18px;
-  display: inline-block;
-  margin-right: 24px;
-  vertical-align: top;
-}
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: #6f6a64;
+      --accent: #7c3aed;
+      --border: #e7ddd1;
+    }
 
-.song-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
+    * { box-sizing: border-box; }
 
-.song-card h3 {
-  margin: 14px 0 10px;
-  font-size: 1.1rem;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-.song-card audio {
-  width: 100%;
-}
-  
-<style>
-:root {
-  --bg: #f6f1ea;
-  --card: #ffffff;
-  --text: #1f1f1f;
-  --muted: #6f6a64;
-  --accent: #7c3aed;
-  --border: #e7ddd1;
-}
+    header {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
 
-body {
-  margin: 0;
-  font-family: system-ui;
-  background: var(--bg);
-  color: var(--text);
-}
+    header a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
 
-header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-}
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
 
-.hero {
-  padding: 40px 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-}
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0 0 20px;
+    }
 
-.button {
-  background: var(--accent);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 20px;
-}
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
 
-.profile-card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 20px;
-}
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 10px;
+    }
 
-main {
-  padding: 20px;
-}
+    .profile-card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
 
-/* BLOG */
-.posts {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 20px;
-}
+    .profile-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
-article {
-  background: var(--card);
-  padding: 15px;
-  border-radius: 20px;
-}
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
-/* SONGS */
-#songs {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
-  margin-bottom: 40px;
-}
+    #songs {
+      margin-bottom: 70px;
+    }
 
-#songs h2 {
-  grid-column: 1 / -1;
-}
+    .songs-grid {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
 
-#songs article {
-  padding: 15px;
-}
+    .song-card {
+      width: 280px;
+      background: #181818;
+      color: white;
+      padding: 16px;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    }
 
-audio {
-  width: 100%;
-}
+    .song-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-@media(max-width:700px){
-  .hero {grid-template-columns:1fr;}
-  .posts {grid-template-columns:1fr;}
-  #songs {grid-template-columns:1fr;}
-}
-</style>
+    .song-card h3 {
+      margin: 14px 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .song-card audio {
+      width: 100%;
+    }
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    article {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+    }
+
+    article img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+    }
+
+    @media(max-width: 700px) {
+      .hero { grid-template-columns: 1fr; }
+      .posts { grid-template-columns: 1fr; }
+      .song-card { width: 100%; }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<h2>Mein Blog</h2>
-<div>Beiträge | Songs | Kontakt</div>
+  <h2>Mein Blog</h2>
+  <nav>
+    <a href="#beitraege">Beiträge</a>
+    <a href="#songs">Songs</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 </header>
 
 <section class="hero">
-<div>
-<h1>Gedanken & Songs</h1>
-<p>Ich schreibe über Dinge, die mich beschäftigen und teile meine Musik.</p>
-<button class="button">Beiträge lesen</button>
-</div>
+  <div>
+    <h1>Gedanken & Songs</h1>
+    <p>Ich schreibe über Dinge, die mich beschäftigen und teile meine Musik.</p>
+    <a class="button" href="#beitraege">Beiträge lesen</a>
+  </div>
 
-<div class="profile-card">
-<img src="portrait-lothar.jpg" style="width:100px; border-radius:50%;">
-<h3>Hi, ich bin Lothar</h3>
-<p>Ich schreibe Texte und Songs über Themen, die mich beschäftigen.</p>
-</div>
+  <div class="profile-card">
+    <img src="portrait-lothar.jpg">
+    <h2>Hi, ich bin Lothar</h2>
+    <p>Ich schreibe Texte und Songs über Themen, die mich beschäftigen.</p>
+  </div>
 </section>
 
 <main>
 
 <section id="songs">
-<section id="songs">
   <h2>Meine Songs</h2>
 
-  <div class="song-card">
-   <img src="luegen-klauen.jpg" style="width:100%; max-width:300px; border-radius:12px;">
-    <div>
+  <div class="songs-grid">
+
+    <div class="song-card">
+      <img src="luegen-klauen.jpg">
       <h3>Mein erster Song</h3>
       <audio controls>
         <source src="song1.mp3">
       </audio>
     </div>
-  </div>
 
-  <div class="song-card">
-    <img src="portrait-lothar.jpg">
-    <div>
+    <div class="song-card">
+      <img src="portrait-lothar.jpg">
       <h3>Mein zweiter Song</h3>
       <audio controls>
         <source src="song2.mp3">
       </audio>
     </div>
+
   </div>
-
 </section>
 
+<section id="beitraege">
+  <h2>Neueste Beiträge</h2>
+
+  <div class="posts">
+    <article>
+      <img src="portrait-lothar.jpg">
+      <h3>Warum ich diesen Blog starte</h3>
+      <p>Ich möchte meine Gedanken und Erfahrungen teilen.</p>
+    </article>
+
+    <article>
+      <h3>Was ich diese Woche gelernt habe</h3>
+      <p>Kleine Erkenntnisse aus meinem Alltag.</p>
+    </article>
+
+    <article>
+      <h3>Warum Schreiben hilft</h3>
+      <p>Schreiben hilft, Gedanken zu ordnen.</p>
+    </article>
+  </div>
 </section>
 
-<h2>Neueste Beiträge</h2>
-
-<div class="posts">
-
-<article>
-<img src="portrait-lothar.jpg" style="width:100%; border-radius:10px;">
-<h3>Warum ich diesen Blog starte</h3>
-<p>Ich möchte meine Gedanken und Erfahrungen teilen.</p>
-</article>
-
-<article>
-<h3>Was ich diese Woche gelernt habe</h3>
-<p>Kleine Erkenntnisse aus meinem Alltag.</p>
-</article>
-
-<article>
-<h3>Warum Schreiben hilft</h3>
-<p>Schreiben hilft, Gedanken zu ordnen.</p>
-</article>
-
-</div>
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Du erreichst mich per E-Mail.</p>
+</section>
 
 </main>
+
+<footer>
+  © 2026 Lothar · Mein Blog
+</footer>
 
 </body>
 </html>
