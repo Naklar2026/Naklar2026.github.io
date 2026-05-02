@@ -6,64 +6,36 @@
 <title>Meine Gegenwart</title>
 
 <style>
-:root {
-  --bg: #f6f1ea;
-  --card: #ffffff;
-  --text: #1f1f1f;
-  --muted: #6f6a64;
-  --accent: #7c3aed;
-  --border: #e7ddd1;
-}
-
 body {
   margin: 0;
   font-family: system-ui;
-  background: var(--bg);
-  color: var(--text);
+  background: #f6f1ea;
 }
 
 header {
   padding: 24px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: white;
-  border-bottom: 1px solid var(--border);
 }
 
-.site-title h2 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.site-name {
-  margin: 2px 0 0;
-  font-size: 16px;
-  color: #666;
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: black;
 }
 
 main {
-  padding: 24px;
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
+  padding: 24px;
 }
 
-/* POSTS */
 .post {
-  background: var(--card);
+  background: white;
   padding: 20px;
   border-radius: 20px;
-  margin-bottom: 30px;
-}
-
-.post h2 {
-  margin-top: 0;
-}
-
-.post-date {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 </style>
 </head>
@@ -71,33 +43,26 @@ main {
 <body>
 
 <header>
-  <div class="site-title">
-    <h2>Echte Worte. Echte Songs.</h2>
-    <p class="site-name">Lothar Schweigerer</p>
-  </div>
   <div>
-    <a href="index.html">Start</a> |
-    <a href="gegenwart.html">Gegenwart</a> |
-    <a href="vergangenheit.html">Vergangenheit</a>
+    <strong>Echte Worte. Echte Songs.</strong><br>
+    Lothar Schweigerer
   </div>
+
+  <nav>
+    <a href="index.html">Start</a>
+  </nav>
 </header>
 
 <main>
 
 <h1>Meine Gegenwart</h1>
-<p>Aktuelle Gedanken, Erfahrungen und Beobachtungen.</p>
 
-<!-- NEUER BEITRAG -->
 <div class="post">
-  <h2>Ein neuer Anfang</h2>
-  <p class="post-date">2. Mai 2026</p>
+  <h2>Mein erster Eintrag</h2>
+  <p>2. Mai 2026</p>
 
-  <p>Heute habe ich begonnen, meine Gedanken aufzuschreiben.</p>
-  <p>Es fühlt sich ungewohnt an, aber auch richtig.</p>
+  <p>Heute beginne ich, meine Gedanken aufzuschreiben.</p>
 </div>
-
-<!-- NEUER BEITRAG HIER EINFÜGEN -->
-<!-- Einfach diesen Block kopieren -->
 
 </main>
 
