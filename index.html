@@ -152,12 +152,12 @@ article img {
 
 <div class="songs-grid">
 
+<!-- SONG 1 -->
 <div class="song-card">
   <div class="cover">
     <img src="luegen-klauen.jpg">
-    <div class="play-button" onclick="document.getElementById('song1').play()">▶</div>
+    <div class="play-button" onclick="playSong('song1')">▶</div>
   </div>
-
   <h3>Mein erster Song</h3>
 
   <audio id="song1" controls preload="metadata">
@@ -165,14 +165,16 @@ article img {
   </audio>
 </div>
 
+<!-- SONG 2 -->
 <div class="song-card">
   <div class="cover">
     <img src="portrait-lothar.jpg">
-    <div class="play-button" onclick="document.getElementById('song2').play()">▶</div>
+    <div class="play-button" onclick="playSong('song2')">▶</div>
   </div>
   <h3>Mein zweiter Song</h3>
-  <audio id="song2">
-    <source src="song2.mp3">
+
+  <audio id="song2" controls preload="metadata">
+    <source src="song2.mp3" type="audio/mpeg">
   </audio>
 </div>
 
@@ -201,6 +203,30 @@ article img {
 </div>
 
 </main>
+
+<!-- SCRIPT -->
+<script>
+function playSong(id) {
+  const audios = document.querySelectorAll("audio");
+
+  // Alle anderen stoppen
+  audios.forEach(audio => {
+    if (audio.id !== id) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
+
+  const current = document.getElementById(id);
+
+  // Toggle Play / Pause
+  if (current.paused) {
+    current.play();
+  } else {
+    current.pause();
+  }
+}
+</script>
 
 </body>
 </html>
