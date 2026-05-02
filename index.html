@@ -156,6 +156,41 @@
       .posts { grid-template-columns: 1fr; }
       .song-card { width: 100%; }
     }
+    /* COVER + PLAY BUTTON */
+.cover {
+  position: relative;
+}
+
+.cover img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: #1db954;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.cover:hover .play-button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
   </style>
 </head>
 
