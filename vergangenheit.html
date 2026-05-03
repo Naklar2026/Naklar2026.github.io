@@ -111,6 +111,23 @@ main {
     width: 100%;
   }
 }
+
+  .chapter-title.with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chapter-title.with-image span {
+  flex: 1;
+}
+
+.chapter-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 </style>
 </head>
 
@@ -144,7 +161,10 @@ main {
 </div>
 
 <!-- KINDHEIT -->
-<h2 id="kindheit" class="chapter-title">Kindheit</h2>
+<h2 id="kindheit" class="chapter-title with-image">
+  <span>Kindheit</span>
+  <img src="kindheit.jpg" class="chapter-image">
+</h2>
 
 <div class="post">
   <h3>Ein früher Moment</h3>
