@@ -41,7 +41,27 @@ main {
   scroll-margin-top: 80px;
 }
 
-/* Navigation oben */
+/* Kapitel mit Bild */
+.chapter-title.with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chapter-title.with-image span {
+  flex: 1;
+}
+
+.chapter-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 20px;
+  opacity: 0.9;
+}
+
+/* Navigation */
 .chapter-nav {
   display: flex;
   flex-wrap: wrap;
@@ -82,51 +102,10 @@ main {
   margin-bottom: 15px;
 }
 
-/* Bild + Text Layout */
-.post-content {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.post-image {
-  width: 200px;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
 .post-text {
   white-space: pre-line;
   line-height: 1.7;
   font-size: 17px;
-}
-
-/* Mobile */
-@media(max-width:700px){
-  .post-content {
-    flex-direction: column;
-  }
-
-  .post-image {
-    width: 100%;
-  }
-}
-
-  .chapter-title.with-image {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.chapter-title.with-image span {
-  flex: 1;
-}
-
-.chapter-image {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 50%;
 }
 </style>
 </head>
@@ -170,32 +149,27 @@ main {
   <h3>Ein früher Moment</h3>
   <p class="post-date">ca. 1975</p>
 
-  <div class="post-content">
-    <img src="kindheit.jpg" class="post-image">
-
-    <div class="post-text">
+  <div class="post-text">
 Ich erinnere mich an einen stillen Nachmittag.
 
 Es war eine Zeit, in der vieles noch einfach war.
-    </div>
   </div>
 </div>
 
 <!-- JUGEND -->
-<h2 id="jugend" class="chapter-title">Jugend</h2>
+<h2 id="jugend" class="chapter-title with-image">
+  <span>Jugend</span>
+  <img src="jugend.jpg" class="chapter-image">
+</h2>
 
 <div class="post">
   <h3>Die ersten eigenen Wege</h3>
   <p class="post-date">ca. 1985</p>
 
-  <div class="post-content">
-    <img src="jugend.jpg" class="post-image">
-
-    <div class="post-text">
+  <div class="post-text">
 Hier beginnt ein neuer Abschnitt meines Lebens.
 
 Die Welt wurde größer und unübersichtlicher.
-    </div>
   </div>
 </div>
 
