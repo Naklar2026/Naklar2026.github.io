@@ -92,6 +92,34 @@ main {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
+
+  .post-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.post-image {
+  width: 200px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.post-text {
+  white-space: pre-line;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+  @media(max-width:700px){
+  .post-content {
+    flex-direction: column;
+  }
+
+  .post-image {
+    width: 100%;
+  }
+}
   
 </style>
 </head>
@@ -129,6 +157,8 @@ main {
 <div class="post">
   <h3>Ein früher Moment</h3>
   <p class="post-date">ca. 1975</p>
+
+  <div class="post-content">
 
   <img src="kindheit.jpg" class="post-image">
 
