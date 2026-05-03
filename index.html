@@ -133,6 +133,12 @@ article {
   .hero {grid-template-columns:1fr;}
   .posts {grid-template-columns:1fr;}
 }
+
+  .card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 </style>
 </head>
 
@@ -210,11 +216,12 @@ article {
 <h2>Rubriken</h2>
 
 <div class="posts">
-<article>
-  <h3>Meine Gegenwart</h3>
-  <p>Aktuelle Gedanken und Erfahrungen.</p>
-  <a href="gegenwart.html">Zur Seite →</a>
-</article>
+<a href="gegenwart.html" class="card-link">
+  <article>
+    <h3>Meine Gegenwart</h3>
+    <p>Aktuelle Gedanken und Erfahrungen.</p>
+  </article>
+</a>
 </div>
 
 </main>
