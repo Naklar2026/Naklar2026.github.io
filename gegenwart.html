@@ -65,5 +65,14 @@ main {
 
 </main>
 
+  <script>
+function formatPost(text) {
+  return text
+    .split("\n\n")
+    .map(p => "<p>" + p + "</p>")
+    .join("");
+}
+</script>
+
 </body>
 </html>
