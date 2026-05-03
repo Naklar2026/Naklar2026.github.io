@@ -16,13 +16,21 @@ header {
   padding: 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: white;
+  border-bottom: 1px solid #e7ddd1;
 }
 
 nav a {
   margin-left: 15px;
   text-decoration: none;
   color: black;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #7c3aed;
+  font-weight: 700;
 }
 
 main {
@@ -41,7 +49,6 @@ main {
   scroll-margin-top: 80px;
 }
 
-/* Kapitel mit Bild */
 .chapter-title.with-image {
   display: flex;
   align-items: center;
@@ -53,15 +60,16 @@ main {
 }
 
 .chapter-image {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   object-fit: cover;
   border-radius: 50%;
   margin-left: 20px;
-  opacity: 0.9;
+  opacity: 0.95;
+  object-position: center top;
 }
 
-/* Navigation */
+/* Navigation Kapitel */
 .chapter-nav {
   display: flex;
   flex-wrap: wrap;
@@ -86,10 +94,10 @@ main {
 /* Beiträge */
 .post {
   background: white;
-  padding: 28px;
-  border-radius: 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 30px;
+  border-radius: 22px;
+  margin-bottom: 50px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
 .post h3 {
@@ -104,15 +112,11 @@ main {
 
 .post-text {
   white-space: pre-line;
-  line-height: 1.7;
-  font-size: 17px;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
-  .chapter-image {
-  object-position: center top;
-}
-
-  .post-link {
+.post-link {
   text-decoration: none;
   color: black;
 }
@@ -121,12 +125,18 @@ main {
   text-decoration: underline;
 }
 
-  nav a.active {
-  color: #7c3aed;
-  font-weight: 600;
+@media(max-width:700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 }
-  
-  
 </style>
 </head>
 
@@ -139,10 +149,10 @@ main {
   </div>
 
   <nav>
-  <a href="index.html">Start</a>
-  <a href="gegenwart.html">Gegenwart</a>
-  <a href="vergangenheit.html" class="active">Meine Vergangenheit</a>
-</nav>
+    <a href="index.html">Start</a>
+    <a href="gegenwart.html">Gegenwart</a>
+    <a href="vergangenheit.html" class="active">Meine Vergangenheit</a>
+  </nav>
 </header>
 
 <main>
@@ -163,13 +173,12 @@ main {
 <!-- KINDHEIT -->
 <h2 id="kindheit" class="chapter-title with-image">
   <span>Kindheit</span>
-  <img src="kindheit.jpg" class="chapter-image">
+  <img src="kindheit.jpg" class="chapter-image" alt="Kindheit">
 </h2>
 
 <div class="post">
   <h3>Ein früher Moment</h3>
   <p class="post-date">ca. 1975</p>
-
   <div class="post-text">
 Ich erinnere mich an einen stillen Nachmittag.
 
@@ -180,15 +189,15 @@ Es war eine Zeit, in der vieles noch einfach war.
 <!-- JUGEND -->
 <h2 id="jugend" class="chapter-title with-image">
   <span>Jugend</span>
-  <img src="jugend.jpeg" class="chapter-image">
+  <img src="jugend.jpeg" class="chapter-image" alt="Jugend">
 </h2>
 
 <div class="post">
   <h3>
-  <a href="jugend-erste-wege.html" class="post-link">
-    Die ersten eigenen Wege
-  </a>
-</h3>
+    <a href="jugend-erste-wege.html" class="post-link">
+      Die ersten eigenen Wege
+    </a>
+  </h3>
   <p class="post-date">ca. 1985</p>
 
   <div class="post-text">
@@ -201,68 +210,68 @@ Die Welt wurde größer und unübersichtlicher.
 <!-- ARBEIT -->
 <h2 id="arbeit" class="chapter-title with-image">
   <span>Arbeit und Leben</span>
-  <img src="arbeit.jpg" class="chapter-image">
+  <img src="arbeit.jpg" class="chapter-image" alt="Arbeit und Leben">
 </h2>
 
 <div class="post">
-  <h3>Mein erster Beitrag zu Arbeit und Leben</h3>
-  <p class="post-date">noch ohne Datum</p>
+  <h3>Mein Weg</h3>
+  <p class="post-date">–</p>
 
   <div class="post-text">
-Hier kommt dein Text zu Arbeit und Leben hinein.
+Hier kannst du deinen beruflichen Weg beschreiben.
 
-Du kannst einfach mehrere Absätze schreiben.
+Was dich geprägt hat und was geblieben ist.
   </div>
 </div>
 
 <!-- FAMILIE -->
 <h2 id="familie" class="chapter-title with-image">
   <span>Liebe, Familie, Verluste</span>
-  <img src="familie.jpg" class="chapter-image">
+  <img src="familie.jpg" class="chapter-image" alt="Familie">
 </h2>
 
 <div class="post">
-  <h3>Mein erster Beitrag zu Liebe, Familie, Verluste</h3>
-  <p class="post-date">noch ohne Datum</p>
+  <h3>Menschen, die wichtig waren</h3>
+  <p class="post-date">–</p>
 
   <div class="post-text">
-Hier kommt dein Text hinein.
+Hier geht es um Nähe, Beziehungen und Abschiede.
+
+Um das, was trägt – und das, was fehlt.
   </div>
 </div>
 
 <!-- MUSIK -->
 <h2 id="musik" class="chapter-title with-image">
   <span>Musik und Schreiben</span>
-  <img src="musik.jpg" class="chapter-image">
+  <img src="musik.jpg" class="chapter-image" alt="Musik und Schreiben">
 </h2>
-  <div class="post">
+
+<div class="post">
   <h3>Wie alles begann</h3>
-  <p class="post-date">noch ohne Datum</p>
+  <p class="post-date">–</p>
 
   <div class="post-text">
-Irgendwann begann ich, Gedanken in Worte zu fassen – und Worte in Musik.
+Irgendwann wurden Gedanken zu Worten – und Worte zu Liedern.
 
-Es war kein Plan, sondern eher ein Bedürfnis.
-
-Mit der Zeit wurden daraus Lieder, die etwas von dem festhalten, was mich bewegt.
+Es war kein Plan, sondern ein Bedürfnis.
   </div>
 </div>
 
-<!-- WAS GEBLIEBEN IST -->
+<!-- BLEIBT -->
 <h2 id="bleibt" class="chapter-title with-image">
   <span>Was geblieben ist</span>
-  <img src="bleibt.jpg" class="chapter-image">
+  <img src="bleibt.jpg" class="chapter-image" alt="Was geblieben ist">
 </h2>
-  <div class="post">
+
+<div class="post">
   <h3>Ein Blick zurück</h3>
   <p class="post-date">heute</p>
 
   <div class="post-text">
-Wenn ich zurückblicke, sehe ich viele Wege, Entscheidungen und Begegnungen.
+Wenn ich zurückblicke, sehe ich viele Wege.
 
-Nicht alles ist geblieben – aber manches hat Bestand.
-
-Und vielleicht ist es genau das, was am Ende zählt.
+Nicht alles ist geblieben – aber manches trägt bis heute.
   </div>
 </div>
 
