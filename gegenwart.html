@@ -16,41 +16,76 @@ header {
   padding: 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: white;
+  border-bottom: 1px solid #e7ddd1;
 }
 
 nav a {
   margin-left: 15px;
   text-decoration: none;
   color: black;
+  font-weight: 500;
+}
+
+nav a.active {
+  color: #7c3aed;
+  font-weight: 700;
 }
 
 main {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   padding: 24px;
 }
 
+h1 {
+  margin-bottom: 10px;
+}
+
+.intro {
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Beiträge */
 .post {
   background: white;
-  padding: 28px;
-  border-radius: 20px;
-  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 22px;
+  margin-bottom: 50px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.post h3 {
+  margin-top: 0;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
 }
 
 .post-text {
   white-space: pre-line;
-  line-height: 1.7;
-  font-size: 17px;
+  line-height: 1.8;
+  font-size: 18px;
   color: #222;
 }
-  nav a.active {
-  color: #7c3aed;
-  font-weight: 700;
+
+@media(max-width:700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 }
-  
 </style>
 </head>
 
@@ -63,33 +98,42 @@ main {
   </div>
 
   <nav>
-  <a href="index.html">Start</a>
-  <a href="gegenwart.html" class="active">Gegenwart</a>
-  <a href="vergangenheit.html">Meine Vergangenheit</a>
-</nav>
-  
+    <a href="index.html">Start</a>
+    <a href="gegenwart.html" class="active">Gegenwart</a>
+    <a href="vergangenheit.html">Meine Vergangenheit</a>
+  </nav>
 </header>
 
 <main>
 
 <h1>Meine Gegenwart</h1>
+<p class="intro">Gedanken, Beobachtungen und Erfahrungen aus dem Hier und Jetzt.</p>
 
+<!-- Beitrag 1 -->
 <div class="post">
-  <h2>Mein erster Eintrag</h2>
-  <p>2. Mai 2026</p>
-  <p>Heute beginne ich, meine Gedanken aufzuschreiben.</p>
+  <h3>Ein heutiger Gedanke</h3>
+  <p class="post-date">heute</p>
+
+  <div class="post-text">
+Hier kannst du deine aktuellen Gedanken festhalten.
+
+Was dich gerade beschäftigt, bewegt oder nicht loslässt.
+  </div>
+</div>
+
+<!-- Beitrag 2 (optional, kannst du kopieren für mehr Beiträge) -->
+<div class="post">
+  <h3>Ein weiterer Moment</h3>
+  <p class="post-date">–</p>
+
+  <div class="post-text">
+Ein zweiter Eintrag – einfach als Beispiel.
+
+Du kannst diesen Block beliebig oft kopieren und anpassen.
+  </div>
 </div>
 
 </main>
-
-  <script>
-function formatPost(text) {
-  return text
-    .split("\n\n")
-    .map(p => "<p>" + p + "</p>")
-    .join("");
-}
-</script>
 
 </body>
 </html>
