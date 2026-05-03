@@ -49,6 +49,11 @@ nav a {
   font-weight: 500;
 }
 
+nav a.active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* HERO */
 .hero {
   padding: 60px 24px;
@@ -73,8 +78,8 @@ nav a {
 }
 
 .profile-card p {
-  font-size: 1.1rem;
   line-height: 1.7;
+  font-size: 17px;
   color: #333;
 }
 
@@ -126,11 +131,17 @@ main {
   cursor: pointer;
 }
 
-/* BLOG */
+/* RUBRIKEN */
 .posts {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 article {
@@ -139,24 +150,27 @@ article {
   border-radius: 20px;
 }
 
-@media(max-width:700px){
-  .hero {grid-template-columns:1fr;}
-  .posts {grid-template-columns:1fr;}
-}
+@media(max-width:700px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
 
-  .card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
+  .posts {
+    grid-template-columns: 1fr;
+  }
 
-  .profile-card p {
-  line-height: 1.6;
-  font-size: 17px;
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 }
-  
 </style>
-  
 </head>
 
 <body>
@@ -167,26 +181,28 @@ article {
     <p class="site-name">Lothar Schweigerer</p>
   </div>
 
-<nav>
-  <a href="index.html" class="active">Start</a>
-  <a href="gegenwart.html">Meine Gegenwart</a>
-  <a href="vergangenheit.html">Meine Vergangenheit</a>
-</nav>
+  <nav>
+    <a href="index.html" class="active">Start</a>
+    <a href="gegenwart.html">Meine Gegenwart</a>
+    <a href="vergangenheit.html">Meine Vergangenheit</a>
+  </nav>
 </header>
 
 <section class="hero">
-<div>
-<h1>Was mich bewegt</h1>
-<p>Ich schreibe und musiziere über Themen, die mich beschäftigen.</p>
-</div>
+  <div>
+    <h1>Was mich bewegt</h1>
+    <p>Ich schreibe und musiziere über Themen, die mich beschäftigen.</p>
+  </div>
 
-<div class="profile-card">
-<img src="portrait-lothar.jpg">
+  <div class="profile-card">
+    <img src="portrait-lothar.jpg" alt="Portrait von Lothar Schweigerer">
 
-<p>Ich heisse Lothar Schweigerer. Ich bin Kinderarzt und Professor, jetzt im Altersruhestand. </p>
-  Ich habe etwas mehr Zeit als früher und so fülle ich diesen Blog mit meinen Gedanken und Songs. </p>
-  Sie beschäftigen sich mit meiner Vergangenheit und Gegenwart - ein wenig auch mit der verbliebenen Zukunft</p>
-</div>
+    <p>Ich heisse Lothar Schweigerer. Ich bin Kinderarzt und Professor, jetzt im Altersruhestand.</p>
+
+    <p>Ich habe etwas mehr Zeit als früher und so fülle ich diesen Blog mit meinen Gedanken und Songs.</p>
+
+    <p>Sie beschäftigen sich mit meiner Vergangenheit und Gegenwart — ein wenig auch mit der verbliebenen Zukunft.</p>
+  </div>
 </section>
 
 <main>
@@ -195,61 +211,60 @@ article {
 
 <div class="songs-grid">
 
-<div class="song-card">
-  <div class="cover">
-    <img src="luegen-klauen.jpg">
-    <div class="play-button" onclick="playSong('song1')">▶</div>
+  <div class="song-card">
+    <div class="cover">
+      <img src="luegen-klauen.jpg" alt="Cover Lügen, Klauen und Zerstören">
+      <div class="play-button" onclick="playSong('song1')">▶</div>
+    </div>
+    <h3>Lügen, Klauen und Zerstören</h3>
+    <p>Mai 2026</p>
+    <audio id="song1" controls>
+      <source src="luegen-klauen.mp3">
+    </audio>
   </div>
-  <h3>Lügen, Klauen und Zerstören</h3>
-  <p>Mai 2026</p>
-  <audio id="song1" controls>
-    <source src="luegen-klauen.mp3">
-  </audio>
-</div>
 
-<div class="song-card">
-  <div class="cover">
-    <img src="denn-du-bleibst.jpeg">
-    <div class="play-button" onclick="playSong('song2')">▶</div>
+  <div class="song-card">
+    <div class="cover">
+      <img src="denn-du-bleibst.jpeg" alt="Cover Denn du bleibst">
+      <div class="play-button" onclick="playSong('song2')">▶</div>
+    </div>
+    <h3>Denn du bleibst</h3>
+    <p>April 2025</p>
+    <audio id="song2" controls>
+      <source src="denn-du-bleibst.mp3">
+    </audio>
   </div>
-  <h3>Denn du bleibst</h3>
-  <p>April 2025</p>
-  <audio id="song2" controls>
-    <source src="denn-du-bleibst.mp3">
-  </audio>
-</div>
 
-<div class="song-card">
-  <div class="cover">
-    <img src="nur-ein-mensch-cash.jpg">
-    <div class="play-button" onclick="playSong('song3')">▶</div>
+  <div class="song-card">
+    <div class="cover">
+      <img src="nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch">
+      <div class="play-button" onclick="playSong('song3')">▶</div>
+    </div>
+    <h3>Nur ein Mensch</h3>
+    <p>Juli 2025</p>
+    <audio id="song3" controls>
+      <source src="nur-ein-mensch-cash.mp3">
+    </audio>
   </div>
-  <h3>Nur ein Mensch</h3>
-  <p>Juli 2025</p>
-  <audio id="song3" controls>
-    <source src="nur-ein-mensch-cash.mp3">
-  </audio>
-</div>
 
 </div>
 
 <h2>Rubriken</h2>
 
 <div class="posts">
-<a href="gegenwart.html" class="card-link">
-  <article>
-    <h3>Meine Gegenwart</h3>
-    <p>Aktuelle Gedanken und Erfahrungen.</p>
-  </article>
-</a>
+  <a href="gegenwart.html" class="card-link">
+    <article>
+      <h3>Meine Gegenwart</h3>
+      <p>Aktuelle Gedanken und Erfahrungen.</p>
+    </article>
+  </a>
 
   <a href="vergangenheit.html" class="card-link">
-  <article>
-    <h3>Meine Vergangenheit</h3>
-    <p>Memoiren und Erinnerungen.</p>
-  </article>
-</a>
-  
+    <article>
+      <h3>Meine Vergangenheit</h3>
+      <p>Memoiren und Erinnerungen.</p>
+    </article>
+  </a>
 </div>
 
 </main>
@@ -257,12 +272,14 @@ article {
 <script>
 function playSong(id) {
   const audios = document.querySelectorAll("audio");
+
   audios.forEach(a => {
-    if(a.id !== id){
+    if (a.id !== id) {
       a.pause();
       a.currentTime = 0;
     }
   });
+
   const current = document.getElementById(id);
   current.paused ? current.play() : current.pause();
 }
