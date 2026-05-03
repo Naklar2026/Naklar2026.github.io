@@ -1,3 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meine Vergangenheit</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui;
+  background: #f6f1ea;
+}
+
+header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* Kapitel */
+.chapter-title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #d8cfc3;
+  font-size: 26px;
+  scroll-margin-top: 80px;
+}
+
+/* Navigation oben */
+.chapter-nav {
+  display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 30px;
@@ -17,16 +63,27 @@
   background: #d8cfc3;
 }
 
-.post-image {
-  width: 50%;
-  max-width: 350px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+/* Beiträge */
+.post {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-  .post-content {
+.post h3 {
+  margin-top: 0;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Bild + Text Layout */
+.post-content {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -44,7 +101,8 @@
   font-size: 17px;
 }
 
-  @media(max-width:700px){
+/* Mobile */
+@media(max-width:700px){
   .post-content {
     flex-direction: column;
   }
@@ -53,7 +111,6 @@
     width: 100%;
   }
 }
-  
 </style>
 </head>
 
@@ -76,7 +133,8 @@
 <h1>Meine Vergangenheit</h1>
 <p>Memoiren, Erinnerungen und Lebensgeschichten.</p>
 
-  <div class="chapter-nav">
+<!-- Navigation -->
+<div class="chapter-nav">
   <a href="#kindheit">Kindheit</a>
   <a href="#jugend">Jugend</a>
   <a href="#arbeit">Arbeit & Leben</a>
@@ -85,6 +143,7 @@
   <a href="#bleibt">Was geblieben ist</a>
 </div>
 
+<!-- KINDHEIT -->
 <h2 id="kindheit" class="chapter-title">Kindheit</h2>
 
 <div class="post">
@@ -92,35 +151,44 @@
   <p class="post-date">ca. 1975</p>
 
   <div class="post-content">
+    <img src="kindheit.jpg" class="post-image">
 
-  <img src="kindheit.jpg" class="post-image">
-
-  <div class="post-text">
+    <div class="post-text">
 Ich erinnere mich an einen stillen Nachmittag.
 
 Es war eine Zeit, in der vieles noch einfach war.
+    </div>
   </div>
 </div>
 
+<!-- JUGEND -->
 <h2 id="jugend" class="chapter-title">Jugend</h2>
 
 <div class="post">
   <h3>Die ersten eigenen Wege</h3>
   <p class="post-date">ca. 1985</p>
 
-  <div class="post-text">
+  <div class="post-content">
+    <img src="jugend.jpg" class="post-image">
+
+    <div class="post-text">
 Hier beginnt ein neuer Abschnitt meines Lebens.
 
 Die Welt wurde größer und unübersichtlicher.
+    </div>
   </div>
 </div>
 
+<!-- ARBEIT -->
 <h2 id="arbeit" class="chapter-title">Arbeit und Leben</h2>
 
+<!-- FAMILIE -->
 <h2 id="familie" class="chapter-title">Liebe, Familie, Verluste</h2>
 
+<!-- MUSIK -->
 <h2 id="musik" class="chapter-title">Musik und Schreiben</h2>
 
+<!-- WAS GEBLIEBEN IST -->
 <h2 id="bleibt" class="chapter-title">Was geblieben ist</h2>
 
 </main>
