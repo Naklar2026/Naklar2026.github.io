@@ -31,7 +31,6 @@ nav a {
   font-weight: 500;
   transition: 0.2s;
 }
-}
 
 nav a:hover {
   color: #7c3aed;
@@ -48,7 +47,6 @@ main {
   padding: 24px;
 }
 
-/* Kapitel */
 .chapter-title {
   margin-top: 70px;
   margin-bottom: 25px;
@@ -56,7 +54,7 @@ main {
   border-bottom: 2px solid #d8cfc3;
   font-size: 28px;
   font-weight: 600;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 .chapter-title.with-image {
@@ -79,7 +77,6 @@ main {
   object-position: center top;
 }
 
-/* Navigation Kapitel */
 .chapter-nav {
   display: flex;
   flex-wrap: wrap;
@@ -101,36 +98,60 @@ main {
   background: #d8cfc3;
 }
 
-/* Beiträge */
 .post {
   background: white;
   padding: 30px;
   border-radius: 22px;
-  margin: 60px 0;   /* ← das ist der entscheidende Punkt */
+  margin: 60px 0;
   box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
 .post h3 {
   margin-top: 0;
+  font-size: 24px;
 }
 
 .post-date {
   font-size: 14px;
   color: #777;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .post-text {
   line-height: 1.8;
   font-size: 18px;
 }
+
+.post-text p {
+  margin: 0 0 1.4rem;
+}
+
+.image-caption {
+  font-size: 0.92rem;
+  color: #777;
+  line-height: 1.6;
+}
+
 .post-image {
   width: 100%;
   border-radius: 14px;
   margin: 15px 0 28px;
   display: block;
 }
-  
+
+.image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 15px 0 28px;
+}
+
+.image-pair img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
 .post-link {
   text-decoration: none;
   color: black;
@@ -151,29 +172,11 @@ main {
     margin-left: 0;
     margin-right: 15px;
   }
-}
-.image-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 15px 0 28px;
-}
 
-.image-pair img {
-  width: 100%;
-  border-radius: 14px;
-  display: block;
-}
-
-@media(max-width:700px) {
   .image-pair {
     grid-template-columns: 1fr;
   }
 }
-  .post {
-  margin: 70px 0;
-}
-  
 </style>
 </head>
 
@@ -197,7 +200,6 @@ main {
 <h1>Meine Vergangenheit</h1>
 <p>Memoiren, Erinnerungen und Lebensgeschichten.</p>
 
-<!-- Navigation -->
 <div class="chapter-nav">
   <a href="#kindheit">Kindheit</a>
   <a href="#jugend">Jugend</a>
@@ -207,9 +209,8 @@ main {
   <a href="#bleibt">Was geblieben ist</a>
 </div>
 
-<!-- KINDHEIT -->
 <h2 id="kindheit" class="chapter-title with-image">
-  <span><strong>Kindheit</strong></span>
+  <span>Kindheit</span>
   <img src="kindheit.jpg" class="chapter-image" alt="Kindheit">
 </h2>
 
@@ -220,23 +221,23 @@ main {
   <img src="kindheit-vater.jpg" class="post-image" alt="Fahrt mit dem Vater auf der Kreidler">
 
   <div class="post-text">
-Manche Eindrücke der frühen Kindheit begleiten einen lebenslang. Oft sind es nur flüchtige Momente – manchmal Augenblicke, die für immer haften bleiben. So habe ich immer noch lebhaft in Erinnerung einen Ausflug mit meinem Vater.
+    <p>Manche Eindrücke der frühen Kindheit begleiten einen lebenslang. Oft sind es nur flüchtige Momente – manchmal Augenblicke, die für immer haften bleiben. So habe ich immer noch lebhaft in Erinnerung einen Ausflug mit meinem Vater.</p>
 
-Es muss in den späten 1950ern gewesen sein. Wir hatten noch kein Auto – so wie viele im Dorf. Aber mein Vater hatte bereits die Kreidler Florett. Immerhin. Man war einigermaßen mobil.
+    <p>Es muss in den späten 1950ern gewesen sein. Wir hatten noch kein Auto – so wie viele im Dorf. Aber mein Vater hatte bereits die Kreidler Florett. Immerhin. Man war einigermaßen mobil.</p>
 
-Sonntags nach dem Hochamt in der St. Anna-Kirche gingen die Männer regelmäßig zum Frühschoppen. Man traf sich, trank etwas und tauschte Neuigkeiten aus, die sich während der Woche zugetragen hatten. Die Mütter blieben zuhause und bereiteten das Mittagessen vor. Überall im Dorf roch man bereits den Sonntagsbraten. Meist blieben die Kinder bei den Müttern und vertrieben sich die Zeit mit Spielen.
+    <p>Sonntags nach dem Hochamt in der St. Anna-Kirche gingen die Männer regelmäßig zum Frühschoppen. Man traf sich, trank etwas und tauschte Neuigkeiten aus, die sich während der Woche zugetragen hatten. Die Mütter blieben zuhause und bereiteten das Mittagessen vor. Überall im Dorf roch man bereits den Sonntagsbraten. Meist blieben die Kinder bei den Müttern und vertrieben sich die Zeit mit Spielen.</p>
 
-Doch an diesem einen Sonntag im Frühling durfte ich mit meinem Vater zum Frühschoppen fahren – hinter ihm auf der Kreidler. Es ging nach Wenigerath, doch nicht über die bereits bestehende Hunsrückhöhenstraße. Ich denke, dieser Weg erschien ihm wegen des Verkehrs mit einem Fünfjährigen hinter sich etwas zu gefährlich.
+    <p>Doch an diesem einen Sonntag im Frühling durfte ich mit meinem Vater zum Frühschoppen fahren – hinter ihm auf der Kreidler. Es ging nach Wenigerath, doch nicht über die bereits bestehende Hunsrückhöhenstraße. Ich denke, dieser Weg erschien ihm wegen des Verkehrs mit einem Fünfjährigen hinter sich etwas zu gefährlich.</p>
 
-So fuhren wir gemütlich über die Bischofsdrohner Straße vorbei an der Dreschmaschine, dem Schwimmbad und dem Sägewerk hinein nach Bischofsdhron. Dort nahmen wir dann die Abzweigung links nach Wenigerath zum Gasthof Gemmel.
+    <p>So fuhren wir gemütlich über die Bischofsdrohner Straße vorbei an der Dreschmaschine, dem Schwimmbad und dem Sägewerk hinein nach Bischofsdhron. Dort nahmen wir dann die Abzweigung links nach Wenigerath zum Gasthof Gemmel.</p>
 
-Die Fahrt war eigentlich aus heutiger Sicht banal. Für mich als Fünfjähriger aber etwas ganz Besonderes. Ich saß hinter meinem Vater, hielt mich fest mit beiden Armen, rückte dicht an ihn heran und legte meine Wangen an seinen starken Rücken.
+    <p>Die Fahrt war eigentlich aus heutiger Sicht banal. Für mich als Fünfjähriger aber etwas ganz Besonderes. Ich saß hinter meinem Vater, hielt mich fest mit beiden Armen, rückte dicht an ihn heran und legte meine Wangen an seinen starken Rücken.</p>
 
-Der warme Maiwind strich mir durch die Locken, und die Frühlingslandschaft zog an uns vorbei. Der Klang des Mopeds wurde gleichmäßig und vertraut. Ich war geborgen.
+    <p>Der warme Maiwind strich mir durch die Locken, und die Frühlingslandschaft zog an uns vorbei. Der Klang des Mopeds wurde gleichmäßig und vertraut. Ich war geborgen.</p>
   </div>
 </div>
 
-  <div class="post">
+<div class="post">
   <h3>Von Locken und richtigen Jungen</h3>
   <p class="post-date">1957</p>
 
@@ -246,97 +247,58 @@ Der warme Maiwind strich mir durch die Locken, und die Frühlingslandschaft zog 
   </div>
 
   <div class="post-text">
-In Großfamilien ist es oft so: Die Erstgeborenen erhalten zunächst viel Aufmerksamkeit. Wenn sie älter werden und weiterer Nachwuchs kommt, verteilt sich diese Aufmerksamkeit auf mehrere Kinder. Gleichzeitig wächst für die Älteren die Verantwortung. Das hat seine Nachteile, aber auch Vorteile. Die Jüngeren sind für sie gewissermaßen das, was für andere ihre Spielpuppen sind – nur dass sie lebendiger und interessanter sind.
+    <p>In Großfamilien ist es oft so: Die Erstgeborenen erhalten zunächst viel Aufmerksamkeit. Wenn sie älter werden und weiterer Nachwuchs kommt, verteilt sich diese Aufmerksamkeit auf mehrere Kinder. Gleichzeitig wächst für die Älteren die Verantwortung. Das hat seine Nachteile, aber auch Vorteile. Die Jüngeren sind für sie gewissermaßen das, was für andere ihre Spielpuppen sind – nur dass sie lebendiger und interessanter sind.</p>
 
-Ich war von sechs Geschwistern das zweitjüngste und der jüngste Junge. Meine beiden älteren Schwestern kümmerten sich liebevoll um mich – fast als wäre ich ihr eigenes Kind. Besonders mochten sie meinen blonden Lockenkopf. Für sie war ich ihr kleiner Engel.
+    <p>Ich war von sechs Geschwistern das zweitjüngste und der jüngste Junge. Meine beiden älteren Schwestern kümmerten sich liebevoll um mich – fast als wäre ich ihr eigenes Kind. Besonders mochten sie meinen blonden Lockenkopf. Für sie war ich ihr kleiner Engel.</p>
 
-Mir konnte das recht sein. Ich genoss ihre Aufmerksamkeit. Doch als ich auf die Vier zuging und mich bewusster im Spiegel betrachtete, änderte sich das. Ich fand, ich sah nicht wirklich gut aus. Mit meinen Locken glich ich eher einem Mädchen. Aber ich wollte aussehen wie ein Junge! Ich hatte mich entschieden: Die Locken müssen weg.
+    <p>Mir konnte das recht sein. Ich genoss ihre Aufmerksamkeit. Doch als ich auf die Vier zuging und mich bewusster im Spiegel betrachtete, änderte sich das. Ich fand, ich sah nicht wirklich gut aus. Mit meinen Locken glich ich eher einem Mädchen. Aber ich wollte aussehen wie ein Junge! Ich hatte mich entschieden: Die Locken müssen weg.</p>
 
-Meine Eltern fragten, wie ich mir das denn vorstellte.
+    <p>Meine Eltern fragten, wie ich mir das denn vorstellte.</p>
 
-„Ich gehe zum Friseur“, sagte ich.
+    <p>„Ich gehe zum Friseur“, sagte ich.</p>
 
-„Und zu welchem?“
+    <p>„Und zu welchem?“</p>
 
-„Zum Eibes.“
+    <p>„Zum Eibes.“</p>
 
-Sie gaben mir ein paar Groschen und ließen mich gehen. Meine Schwestern waren entsetzt.
+    <p>Sie gaben mir ein paar Groschen und ließen mich gehen. Meine Schwestern waren entsetzt.</p>
 
-Ich machte mich auf den Weg – von der Bernkasteler Straße über den Unteren Markt bis zur Bahnhofstraße. Beim Friseur Eibes bekam ich einen „Männerschnitt“. Als ich den Stuhl verließ und mich im Spiegel sah, war ich zufrieden. So wollte ich aussehen! Ich war stolz wie Oskar und flitzte so schnell ich konnte nach Hause.
+    <p>Ich machte mich auf den Weg – von der Bernkasteler Straße über den Unteren Markt bis zur Bahnhofstraße. Beim Friseur Eibes bekam ich einen „Männerschnitt“. Als ich den Stuhl verließ und mich im Spiegel sah, war ich zufrieden. So wollte ich aussehen! Ich war stolz wie Oskar und flitzte so schnell ich konnte nach Hause.</p>
 
-Schon von weitem sah ich meine beiden Schwestern am Fenster stehen. Je näher ich kam, desto deutlicher wurden ihre Gesichter. Zunächst waren sie nur erstaunt. Doch dann erkannte ich mehr und mehr Entsetzen und Schmerz: Ihr blonder Engel war verschwunden. Jetzt stand da ein ganz gewöhnlicher Junge.
+    <p>Schon von weitem sah ich meine beiden Schwestern am Fenster stehen. Je näher ich kam, desto deutlicher wurden ihre Gesichter. Zunächst waren sie nur erstaunt. Doch dann erkannte ich mehr und mehr Entsetzen und Schmerz: Ihr blonder Engel war verschwunden. Jetzt stand da ein ganz gewöhnlicher Junge.</p>
 
-Mir war das egal. Für mich begann nun das Leben als Mann ...
+    <p>Mir war das egal. Für mich begann nun das Leben als Mann ...</p>
   </div>
 </div>
 
- <div class="post">
+<div class="post">
+  <h3>Hausbrand in der Nachbarschaft</h3>
+  <p class="post-date">ca. 1957</p>
+
   <img src="kindheit-hausbrand-weyand.jpg" class="post-image" alt="Abgebranntes Haus Weyand in der Nachbarschaft">
 
-  <h3>Hausbrand in der Nachbarschaft</h3>
+  <div class="post-text">
+    <p>Es wird im Jahr 1957 gewesen sein. Damals ereignete sich etwas, das sich mir tief eingeprägt hat. Die Nacht war hereingebrochen und wir Kinder schliefen bereits fest. Plötzlich heulten die Sirenen im ganzen Dorf. Nach meiner Erinnerung gab es damals keine Feuerwehrübungen – und schon gar keine nächtlichen. Es musste also etwas Außergewöhnliches, Bedrohliches geschehen sein.</p>
 
-<div class="post-text">
-  <p>
-    Es wird im Jahr 1957 gewesen sein. Damals ereignete sich etwas, das sich mir tief eingeprägt hat.
-    Die Nacht war hereingebrochen und wir Kinder schliefen bereits fest. Plötzlich heulten die Sirenen
-    im ganzen Dorf. Nach meiner Erinnerung gab es damals keine Feuerwehrübungen – und schon gar keine
-    nächtlichen. Es musste also etwas Außergewöhnliches, Bedrohliches geschehen sein.
-  </p>
+    <p>Bald waren wir selbst Teil dieses Geschehens. Das Bauernhaus der Familie Weyand brannte lichterloh. Zwischen ihrem Haus und unserem lag lediglich das Anwesen der Familie Kramp, mit dem wir Wand an Wand lebten. Und dieses wiederum befand sich in kaum mehr als zwei Metern Entfernung vom Brandherd. Wir waren bedrückt. Denn wenn das Feuer weiter um sich griff, würde zuerst das Haus Kramp und dann unseres in Flammen aufgehen.</p>
 
-  <p>
-    Bald waren wir selbst Teil dieses Geschehens. Das Bauernhaus der Familie Weyand brannte lichterloh.
-    Zwischen ihrem Haus und unserem lag lediglich das Anwesen der Familie Kramp, mit dem wir Wand an Wand
-    lebten. Und dieses wiederum befand sich in kaum mehr als zwei Metern Entfernung vom Brandherd.
-    Wir waren bedrückt. Denn wenn das Feuer weiter um sich griff, würde zuerst das Haus Kramp und dann
-    unseres in Flammen aufgehen.
-  </p>
+    <p>Meine Eltern reagierten in einer Weise, die heute fast hilflos wirkt. Meine Mutter stürmte auf den Dachboden und begann, in einer Mischung aus Entschlossenheit und Verwirrung alte Matratzen aus dem Fenster zu werfen – als ließe sich dem Feuer so etwas entgegensetzen. Mein Vater ging hinaus zum Brandherd, um sich ein Bild von der Lage zu machen. Wir Kinder mussten im Haus bleiben und warten.</p>
 
-  <p>
-    Meine Eltern reagierten in einer Weise, die heute fast hilflos wirkt. Meine Mutter stürmte auf den
-    Dachboden und begann, in einer Mischung aus Entschlossenheit und Verwirrung alte Matratzen aus dem
-    Fenster zu werfen – als ließe sich dem Feuer so etwas entgegensetzen. Mein Vater ging hinaus zum
-    Brandherd, um sich ein Bild von der Lage zu machen. Wir Kinder mussten im Haus bleiben und warten.
-  </p>
+    <p>Meine beiden Brüder waren ebenfalls draußen, sodass ich mit meinen Schwestern allein zurückblieb. Ich war vier Jahre alt, meine Schwestern elf und sechzehn. Wir saßen im Wohnzimmer, klammerten uns aneinander und versuchten, uns gegenseitig Trost zu spenden. Durch die Fenster drang das flackernde Licht des Brandes. Wir hörten das dumpfe Geräusch der Feuerwehrpumpen und die besorgten Rufe der Nachbarn und Helfer.</p>
 
-  <p>
-    Meine beiden Brüder waren ebenfalls draußen, sodass ich mit meinen Schwestern allein zurückblieb.
-    Ich war vier Jahre alt, meine Schwestern elf und sechzehn. Wir saßen im Wohnzimmer, klammerten uns
-    aneinander und versuchten, uns gegenseitig Trost zu spenden. Durch die Fenster drang das flackernde
-    Licht des Brandes. Wir hörten das dumpfe Geräusch der Feuerwehrpumpen und die besorgten Rufe der
-    Nachbarn und Helfer.
-  </p>
+    <p>Obwohl wir uns in einiger Entfernung befanden, war es in unserem Wohnzimmer glühend heiß. Die Zeit schien stillzustehen. Ich konnte nichts tun und wagte kaum zu atmen. All diese Eindrücke verdichteten sich zu einem Gefühl von Grauen, Ausgeliefertsein und existenzieller Bedrohung. Noch heute überkommt mich ein seltsames Gefühl, wenn ich mich in diese Situation zurückversetze.</p>
 
-  <p>
-    Obwohl wir uns in einiger Entfernung befanden, war es in unserem Wohnzimmer glühend heiß.
-    Die Zeit schien stillzustehen. Ich konnte nichts tun und wagte kaum zu atmen. All diese Eindrücke
-    verdichteten sich zu einem Gefühl von Grauen, Ausgeliefertsein und existenzieller Bedrohung.
-    Noch heute überkommt mich ein seltsames Gefühl, wenn ich mich in diese Situation zurückversetze.
-  </p>
+    <p>Die Feuerwehrleute aus Morbach setzten alles daran, ein Übergreifen der Flammen zu verhindern. Schließlich gelang es ihnen, die dem Brand zugewandte Wand des Hauses Kramp so stark zu bewässern, dass sie standhielt. Die Nacht mit all der Ungewissheit zog sich bis in den Morgen hinein.</p>
 
-  <p>
-    Die Feuerwehrleute aus Morbach setzten alles daran, ein Übergreifen der Flammen zu verhindern.
-    Schließlich gelang es ihnen, die dem Brand zugewandte Wand des Hauses Kramp so stark zu bewässern,
-    dass sie standhielt. Die Nacht mit all der Ungewissheit zog sich bis in den Morgen hinein.
-  </p>
+    <p>Das Haus Weyand brannte bis auf die Grundmauern nieder. Das Haus Kramp trug sichtbare Spuren davon, blieb aber bestehen – ebenso wie unseres.</p>
 
-  <p>
-    Das Haus Weyand brannte bis auf die Grundmauern nieder. Das Haus Kramp trug sichtbare Spuren davon,
-    blieb aber bestehen – ebenso wie unseres.
-  </p>
+    <p>Was bis heute bleibt, ist die Erinnerung an diese Stunden, in denen nicht klar war, ob unser Zuhause erhalten bleiben würde oder nicht.</p>
 
-  <p>
-    Was bis heute bleibt, ist die Erinnerung an diese Stunden, in denen nicht klar war,
-    ob unser Zuhause erhalten bleiben würde oder nicht.
-  </p>
-
-  <p class="image-caption">
-    Das Bild zeigt das abgebrannte Haus Weyand. Rechts davon das Haus Kramp.
-    Unser Haus lag weiter rechts außerhalb des Bildes. Im Hintergrund ist die Gerberei zu sehen,
-    die später ebenfalls abbrannte.
-  </p>
+    <p class="image-caption">Das Bild zeigt das abgebrannte Haus Weyand. Rechts davon das Haus Kramp. Unser Haus lag weiter rechts außerhalb des Bildes. Im Hintergrund ist die Gerberei zu sehen, die später ebenfalls abbrannte.</p>
+  </div>
 </div>
 
-   <div class="post">
+<div class="post">
   <h3>Schuing Gamm! Schuing Gamm!</h3>
   <p class="post-date">ca. 1957</p>
 
@@ -346,63 +308,26 @@ Mir war das egal. Für mich begann nun das Leben als Mann ...
   </div>
 
   <div class="post-text">
-    <p>
-      Meine frühesten Erinnerungen an die amerikanischen Soldaten betreffen die Zeit um das Jahr 1957.
-      Damals waren die Besatzungskräfte zahlreich: Auf dem Wenigerather Munitionslager und dem nahegelegenen
-      Flugplatz Hahn lebten zeitweise mehr als 10.000 amerikanische Soldaten mit ihren Familien. Deshalb gehörten
-      Begegnungen mit ihnen zu unserem ganz normalen Alltag.
-    </p>
+    <p>Meine frühesten Erinnerungen an die amerikanischen Soldaten betreffen die Zeit um das Jahr 1957. Damals waren die Besatzungskräfte zahlreich: Auf dem Wenigerather Munitionslager und dem nahegelegenen Flugplatz Hahn lebten zeitweise mehr als 10.000 amerikanische Soldaten mit ihren Familien. Deshalb gehörten Begegnungen mit ihnen zu unserem ganz normalen Alltag.</p>
 
-    <p>
-      Für uns Kinder waren die Amerikaner – von uns meist schlicht „Amis“ genannt – wie Wesen aus einer anderen Welt.
-      Menschen mit schwarzer Hautfarbe waren im Hunsrück eine Rarität, und nun begegneten sie uns als Teil dieser
-      fremden Gemeinschaft. Die Amis hatten Deutschland befreit und wurden deshalb geschätzt und gefeiert.
-      Doch nicht nur deshalb: Sie wirkten auf uns offen, freundlich und großzügig – Eigenschaften, die uns Hunsrückern
-      eher fremd waren. Die Amis taten aber auch einiges, um diesen Eindruck zu festigen.
-    </p>
+    <p>Für uns Kinder waren die Amerikaner – von uns meist schlicht „Amis“ genannt – wie Wesen aus einer anderen Welt. Menschen mit schwarzer Hautfarbe waren im Hunsrück eine Rarität, und nun begegneten sie uns als Teil dieser fremden Gemeinschaft. Die Amis hatten Deutschland befreit und wurden deshalb geschätzt und gefeiert. Doch nicht nur deshalb: Sie wirkten auf uns offen, freundlich und großzügig – Eigenschaften, die uns Hunsrückern eher fremd waren. Die Amis taten aber auch einiges, um diesen Eindruck zu festigen.</p>
 
-    <p>
-      Besonders lebhaft erinnere ich mich an Begegnungen mit den Soldaten und ihren Fahrzeugen. Manchmal hörten wir
-      aus der Ferne den dumpfen Motorenlärm von Panzern. Zunächst leise, dann immer bedrohlicher. Wir wussten, was nun
-      folgen würde: Sie würden von der Hunsrückhöhenstraße kommend die Bernkasteler Straße hinauf und weiter in Richtung
-      Baumholder fahren.
-    </p>
+    <p>Besonders lebhaft erinnere ich mich an Begegnungen mit den Soldaten und ihren Fahrzeugen. Manchmal hörten wir aus der Ferne den dumpfen Motorenlärm von Panzern. Zunächst leise, dann immer bedrohlicher. Wir wussten, was nun folgen würde: Sie würden von der Hunsrückhöhenstraße kommend die Bernkasteler Straße hinauf und weiter in Richtung Baumholder fahren.</p>
 
-    <p>
-      Also suchten wir uns den besten Platz – entweder direkt am Straßenrand oder, noch besser, auf dem Sims am Eingang
-      zum Gasthaus von Maria Rahn. Dort waren wir den Panzerbesatzungen besonders nah.
-    </p>
+    <p>Also suchten wir uns den besten Platz – entweder direkt am Straßenrand oder, noch besser, auf dem Sims am Eingang zum Gasthaus von Maria Rahn. Dort waren wir den Panzerbesatzungen besonders nah.</p>
 
-    <p>
-      Und dann ging es los: Mit einem Affenzahn rasten die Panzer die Straße hinauf. Aus den Auspuffrohren quoll dichter,
-      schwarzer Rauch. Die Panzerketten rasselten und hinterließen ihre Spuren im weichen Asphalt. Der Lärm war für uns
-      kaum auszuhalten. Gleichzeitig waren wir, gerade einmal vier Jahre alt, vollkommen fasziniert von diesem Schauspiel.
-    </p>
+    <p>Und dann ging es los: Mit einem Affenzahn rasten die Panzer die Straße hinauf. Aus den Auspuffrohren quoll dichter, schwarzer Rauch. Die Panzerketten rasselten und hinterließen ihre Spuren im weichen Asphalt. Der Lärm war für uns kaum auszuhalten. Gleichzeitig waren wir, gerade einmal vier Jahre alt, vollkommen fasziniert von diesem Schauspiel.</p>
 
-    <p>
-      Die Soldaten auf den Panzern winkten uns freundlich zu. Wir winkten zurück und versuchten, den ohrenbetäubenden
-      Lärm mit unseren Ausrufen zu übertönen. „Schuing Gamm, Schuing Gamm“ riefen wir aus vollem Halse.
-    </p>
+    <p>Die Soldaten auf den Panzern winkten uns freundlich zu. Wir winkten zurück und versuchten, den ohrenbetäubenden Lärm mit unseren Ausrufen zu übertönen. „Schuing Gamm, Schuing Gamm“ riefen wir aus vollem Halse.</p>
 
-    <p>
-      Die Amis hatten ihren Spaß daran und warfen uns Streifen des begehrten „Wrigley’s Spearmint“-Kaugummis zu.
-      Wer geschickt war und etwas Glück hatte, konnte eine dieser Köstlichkeiten ergattern. Für uns waren diese
-      Kaugummistreifen mehr als nur eine Süßigkeit. Sie waren ein Stück Kontakt zu einer fremden, wohlhabenden Welt,
-      die wir irgendwann selbst kennenlernen wollten.
-    </p>
+    <p>Die Amis hatten ihren Spaß daran und warfen uns Streifen des begehrten „Wrigley’s Spearmint“-Kaugummis zu. Wer geschickt war und etwas Glück hatte, konnte eine dieser Köstlichkeiten ergattern. Für uns waren diese Kaugummistreifen mehr als nur eine Süßigkeit. Sie waren ein Stück Kontakt zu einer fremden, wohlhabenden Welt, die wir irgendwann selbst kennenlernen wollten.</p>
 
-    <p>
-      Mir ist das später gelungen – und diese frühen Begegnungen haben vielleicht dazu beigetragen.
-    </p>
+    <p>Mir ist das später gelungen – und diese frühen Begegnungen haben vielleicht dazu beigetragen.</p>
 
-    <p class="image-caption">
-      Farbfoto: Szene mit KI nachempfunden. Schwarzweiß-Foto: Original-Aufgang zum Gasthaus Rahn
-      (Foto: Berthold Staudt).
-    </p>
+    <p class="image-caption">Farbfoto: Szene mit KI nachempfunden. Schwarzweiß-Foto: Original-Aufgang zum Gasthaus Rahn (Foto: Berthold Staudt).</p>
   </div>
 </div>
 
-<!-- JUGEND -->
 <h2 id="jugend" class="chapter-title with-image">
   <span>Jugend</span>
   <img src="jugend.jpeg" class="chapter-image" alt="Jugend">
@@ -410,20 +335,16 @@ Mir war das egal. Für mich begann nun das Leben als Mann ...
 
 <div class="post">
   <h3>
-    <a href="jugend-erste-wege.html" class="post-link">
-      Die ersten eigenen Wege
-    </a>
+    <a href="jugend-erste-wege.html" class="post-link">Die ersten eigenen Wege</a>
   </h3>
   <p class="post-date">ca. 1985</p>
 
   <div class="post-text">
-Hier beginnt ein neuer Abschnitt meines Lebens.
-
-Die Welt wurde größer und unübersichtlicher.
+    <p>Hier beginnt ein neuer Abschnitt meines Lebens.</p>
+    <p>Die Welt wurde größer und unübersichtlicher.</p>
   </div>
 </div>
 
-<!-- ARBEIT -->
 <h2 id="arbeit" class="chapter-title with-image">
   <span>Arbeit und Leben</span>
   <img src="arbeit.jpg" class="chapter-image" alt="Arbeit und Leben">
@@ -434,13 +355,11 @@ Die Welt wurde größer und unübersichtlicher.
   <p class="post-date">–</p>
 
   <div class="post-text">
-Hier kannst du deinen beruflichen Weg beschreiben.
-
-Was dich geprägt hat und was geblieben ist.
+    <p>Hier kannst du deinen beruflichen Weg beschreiben.</p>
+    <p>Was dich geprägt hat und was geblieben ist.</p>
   </div>
 </div>
 
-<!-- FAMILIE -->
 <h2 id="familie" class="chapter-title with-image">
   <span>Liebe, Familie, Verluste</span>
   <img src="familie.jpg" class="chapter-image" alt="Familie">
@@ -451,13 +370,11 @@ Was dich geprägt hat und was geblieben ist.
   <p class="post-date">–</p>
 
   <div class="post-text">
-Hier geht es um Nähe, Beziehungen und Abschiede.
-
-Um das, was trägt – und das, was fehlt.
+    <p>Hier geht es um Nähe, Beziehungen und Abschiede.</p>
+    <p>Um das, was trägt – und das, was fehlt.</p>
   </div>
 </div>
 
-<!-- MUSIK -->
 <h2 id="musik" class="chapter-title with-image">
   <span>Musik und Schreiben</span>
   <img src="musik.jpg" class="chapter-image" alt="Musik und Schreiben">
@@ -468,13 +385,11 @@ Um das, was trägt – und das, was fehlt.
   <p class="post-date">–</p>
 
   <div class="post-text">
-Irgendwann wurden Gedanken zu Worten – und Worte zu Liedern.
-
-Es war kein Plan, sondern ein Bedürfnis.
+    <p>Irgendwann wurden Gedanken zu Worten – und Worte zu Liedern.</p>
+    <p>Es war kein Plan, sondern ein Bedürfnis.</p>
   </div>
 </div>
 
-<!-- BLEIBT -->
 <h2 id="bleibt" class="chapter-title with-image">
   <span>Was geblieben ist</span>
   <img src="bleibt.jpg" class="chapter-image" alt="Was geblieben ist">
@@ -485,9 +400,8 @@ Es war kein Plan, sondern ein Bedürfnis.
   <p class="post-date">heute</p>
 
   <div class="post-text">
-Wenn ich zurückblicke, sehe ich viele Wege.
-
-Nicht alles ist geblieben – aber manches trägt bis heute.
+    <p>Wenn ich zurückblicke, sehe ich viele Wege.</p>
+    <p>Nicht alles ist geblieben – aber manches trägt bis heute.</p>
   </div>
 </div>
 
