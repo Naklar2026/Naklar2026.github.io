@@ -6,7 +6,7 @@
 <title>Echte Worte. Echte Songs.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -55,10 +55,6 @@ body::before {
 
 h1, h2, h3, p {
   margin-top: 0;
-}
-
-h1, h2, h3 {
-  font-family: "Fraunces", Georgia, serif;
 }
 
 p {
@@ -162,9 +158,10 @@ nav a.active {
 .hero h1 {
   max-width: 760px;
   margin-bottom: 18px;
-  font-size: clamp(48px, 8vw, 86px);
-  line-height: 0.94;
-  letter-spacing: -0.075em;
+  font-size: clamp(48px, 8vw, 82px);
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: -0.07em;
 }
 
 .hero-lead {
@@ -241,9 +238,10 @@ main {
 
 .section-title {
   margin-bottom: 18px;
-  font-size: clamp(31px, 4vw, 48px);
-  line-height: 1;
-  letter-spacing: -0.05em;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.055em;
 }
 
 .section-kicker {
@@ -328,8 +326,9 @@ main {
 
 .value h3 {
   margin: 0 0 13px;
-  font-size: 22px;
-  letter-spacing: -0.025em;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.03em;
 }
 
 .value p {
@@ -365,28 +364,30 @@ main {
 .song-card {
   position: relative;
   overflow: hidden;
-  background: #171513;
-  color: white;
+  background: rgba(255,255,255,0.72);
+  color: var(--text);
   padding: 14px;
+  border: 1px solid rgba(90,72,54,0.12);
   border-radius: 24px;
-  box-shadow: 0 20px 38px rgba(31,24,18,0.20);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
 }
 
 .song-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 26px 52px rgba(31,24,18,0.26);
+  background: rgba(255,255,255,0.90);
+  box-shadow: 0 22px 44px rgba(66,48,31,0.14);
 }
 
 .song-card:hover h3 {
-  color: #c4b5fd;
+  color: var(--accent);
 }
 
 .cover {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  background: #27231f;
+  background: #eee5da;
 }
 
 .cover img {
@@ -431,7 +432,7 @@ main {
 
 .song-card p {
   margin: 0 2px 12px;
-  color: rgba(255,255,255,0.58);
+  color: var(--muted);
   font-size: 14px;
   line-height: 1.4;
 }
@@ -472,7 +473,8 @@ article:hover {
 article h3 {
   margin-bottom: 8px;
   font-size: 23px;
-  letter-spacing: -0.03em;
+  font-weight: 750;
+  letter-spacing: -0.035em;
 }
 
 article p {
@@ -537,41 +539,6 @@ article p {
     grid-template-columns: 1fr;
   }
 }
-
-  .fulfillment {
-  max-width: 760px;
-  margin: 0 auto 90px;
-}
-
-.fulfillment-intro {
-  color: var(--muted);
-  font-size: 19px;
-  margin-bottom: 40px;
-  line-height: 1.6;
-}
-
-.fulfillment-list {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
-.fulfillment-item {
-  padding-left: 18px;
-  border-left: 2px solid rgba(124,58,237,0.3);
-}
-
-.point {
-  font-weight: 600;
-  margin: 0 0 6px;
-}
-
-.fulfillment-item p:last-child {
-  margin: 0;
-  color: #4c443d;
-  line-height: 1.7;
-}
-  
 </style>
 </head>
 
@@ -657,61 +624,6 @@ article p {
       <p>Menschen ohne eigene Haltung, die sich lediglich dem Strom anschließen, bleiben mir fremd. Ich schätze Persönlichkeiten, die selbstständig denken, Verantwortung für ihre Überzeugungen übernehmen und ihren eigenen, von Fairness getragenen Weg gehen.</p>
     </div>
   </div>
-</section>
-
-  <section class="fulfillment">
-
-  <h2 class="section-title">Was mich erfüllt</h2>
-
-  <p class="fulfillment-intro">
-    Es sind oft keine großen Dinge, sondern stille Augenblicke,
-    in denen ich spüre, dass etwas stimmt.
-  </p>
-
-  <div class="fulfillment-list">
-
-    <div class="fulfillment-item">
-      <p class="point">Ein Gespräch, das ehrlich ist.</p>
-      <p>
-        Wenn Worte nicht nur gesprochen, sondern gemeint sind.
-        Wenn man einander zuhört, ohne sofort zu urteilen.
-      </p>
-    </div>
-
-    <div class="fulfillment-item">
-      <p class="point">Musik.</p>
-      <p>
-        Sie begleitet mich seit vielen Jahren.
-        Manchmal bringt sie Erinnerungen zurück, manchmal öffnet sie neue Gedanken.
-      </p>
-    </div>
-
-    <div class="fulfillment-item">
-      <p class="point">Zeit mit Menschen, die mir nahe sind.</p>
-    </div>
-
-    <div class="fulfillment-item">
-      <p class="point">Das Gefühl, gebraucht zu werden.</p>
-      <p>
-        In meinem Beruf war das lange selbstverständlich.
-        Heute ist es ein leiseres, aber nicht weniger wichtiges Gefühl.
-      </p>
-    </div>
-
-    <div class="fulfillment-item">
-      <p class="point">Ein ruhiger Morgen.</p>
-    </div>
-
-    <div class="fulfillment-item">
-      <p class="point">Zurückzublicken und zu verstehen.</p>
-      <p>
-        Manche Dinge erschließen sich erst im Nachhinein.
-        Dann ergibt vieles einen Sinn, der vorher verborgen war.
-      </p>
-    </div>
-
-  </div>
-
 </section>
 
 <section class="text-section songs-intro">
