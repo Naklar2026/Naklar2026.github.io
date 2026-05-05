@@ -190,13 +190,52 @@ article {
   margin-bottom: 60px;
 }
 
-  .values {
-  max-width: 820px;
-  margin: 50px 0 80px;
-  padding: 28px;
-  background: rgba(255,255,255,0.7);
-  border-radius: 22px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+.values {
+  margin: 40px 0 90px;
+}
+
+.values h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+.values-intro {
+  max-width: 680px;
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.value {
+  background: rgba(255,255,255,0.78);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.045);
+}
+
+.value h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.value p {
+  margin: 0;
+  line-height: 1.7;
+  color: #444;
+  font-size: 16.5px;
+}
+
+@media(max-width:700px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .values h2 {
@@ -265,37 +304,58 @@ article {
 
 <main>
 
-  <section class="values">
+<section class="values">
   <h2>Haltung</h2>
 
-  <div class="value">
-    <h3>Respekt</h3>
-    <p>Ich bemühe mich, jedem Menschen mit Respekt zu begegnen. In meiner Kindheit und Jugend hatte ich Kontakt zu Menschen aus allen gesellschaftlichen Schichten, auch zu jenen, die am Rand standen. Ich habe gelernt, dass jeder Mensch eine innere Würde besitzt und das Bedürfnis hat, gesehen zu werden, sei es durch ein gutes Wort oder einen freundlichen Gruß.</p>
-  </div>
+  <p class="values-intro">
+    Einige Gedanken darüber, was mir wichtig ist — im Umgang mit Menschen,
+    mit Verantwortung und mit mir selbst.
+  </p>
 
-  <div class="value">
-    <h3>Gerechtigkeit</h3>
-    <p>Ich ertrage es nicht, wenn Menschen ungerecht behandelt werden. Jeder Mensch, unabhängig von seinen geistigen oder körperlichen Voraussetzungen, sollte die gleiche Chance erhalten und für seine Anstrengungen angemessen anerkannt und belohnt werden.</p>
-  </div>
+  <div class="values-grid">
 
-  <div class="value">
-    <h3>Hartnäckigkeit</h3>
-    <p>Ich kann hartnäckig sein. Wenn ich mit anderen ein Ziel verfolge, dann macht es mir nichts aus, sie immer wieder anzutreiben oder zu ermahnen, damit sie ihre Verpflichtungen erfüllen. Manchmal gehe ich dabei bis an die Schmerzgrenze. Dann bin ich nicht so beliebt. Ich glaube, diese Eigenschaft habe ich von meiner Mutter geerbt.</p>
-  </div>
+    <div class="value">
+      <h3>Respekt</h3>
+      <p>
+        Ich bemühe mich, jedem Menschen mit Respekt zu begegnen. In meiner Kindheit und Jugend hatte ich Kontakt zu Menschen aus allen gesellschaftlichen Schichten, auch zu jenen, die am Rand standen. Ich habe gelernt, dass jeder Mensch eine innere Würde besitzt und das Bedürfnis hat, gesehen zu werden, sei es durch ein gutes Wort oder einen freundlichen Gruß.
+      </p>
+    </div>
 
-  <div class="value">
-    <h3>Widerstand</h3>
-    <p>Wenn ich zurückblicke, frage ich mich oft, was mich angetrieben hat. Es waren wohl mehrere Kräfte: eine davon der Widerstand. Vor allem dann, wenn ich nicht verstand, worauf er sich gründete. Je stärker der Widerstand, desto hartnäckiger hielt ich an meinem Ziel fest. Selbst um den Preis von Niedergeschlagenheit und Verzweiflung.</p>
-  </div>
+    <div class="value">
+      <h3>Gerechtigkeit</h3>
+      <p>
+        Ich ertrage es nicht, wenn Menschen ungerecht behandelt werden. Jeder Mensch, unabhängig von seinen geistigen oder körperlichen Voraussetzungen, sollte die gleiche Chance erhalten und für seine Anstrengungen angemessen anerkannt und belohnt werden.
+      </p>
+    </div>
 
-  <div class="value">
-    <h3>Autorität</h3>
-    <p>Ich respektiere Menschen, die Autorität besitzen. Nicht wegen ihrer Macht, sondern weil sie sich durch besondere Leistungen und persönliche Integrität auszeichnen. Weniger schätze ich Menschen, die Autorität inszenieren oder sie auf schwer nachvollziehbaren Wegen erlangt haben. Ihnen begegne ich eher skeptisch, auch mit offenem Widerspruch.</p>
-  </div>
+    <div class="value">
+      <h3>Hartnäckigkeit</h3>
+      <p>
+        Ich kann hartnäckig sein. Wenn ich mit anderen ein Ziel verfolge, dann macht es mir nichts aus, sie immer wieder anzutreiben oder zu ermahnen, damit sie ihre Verpflichtungen erfüllen. Manchmal gehe ich dabei bis an die Schmerzgrenze. Dann bin ich nicht so beliebt. Ich glaube, diese Eigenschaft habe ich von meiner Mutter geerbt.
+      </p>
+    </div>
 
-  <div class="value">
-    <h3>Mitläufer</h3>
-    <p>Menschen ohne eigene Haltung, die sich lediglich dem Strom anschließen, bleiben mir fremd. Ich schätze Persönlichkeiten, die selbstständig denken, Verantwortung für ihre Überzeugungen übernehmen und ihren eigenen, von Fairness getragenen Weg gehen.</p>
+    <div class="value">
+      <h3>Widerstand</h3>
+      <p>
+        Wenn ich zurückblicke, frage ich mich oft, was mich angetrieben hat. Es waren wohl mehrere Kräfte: eine davon der Widerstand. Vor allem dann, wenn ich nicht verstand, worauf er sich gründete. Je stärker der Widerstand, desto hartnäckiger hielt ich an meinem Ziel fest. Selbst um den Preis von Niedergeschlagenheit und Verzweiflung.
+      </p>
+    </div>
+
+    <div class="value">
+      <h3>Autorität</h3>
+      <p>
+        Ich respektiere Menschen, die Autorität besitzen. Nicht wegen ihrer Macht, sondern weil sie sich durch besondere Leistungen und persönliche Integrität auszeichnen. Weniger schätze ich Menschen, die Autorität inszenieren oder sie auf schwer nachvollziehbaren Wegen erlangt haben. Ihnen begegne ich eher skeptisch, auch mit offenem Widerspruch.
+      </p>
+    </div>
+
+    <div class="value">
+      <h3>Mitläufer</h3>
+      <p>
+        Menschen ohne eigene Haltung, die sich lediglich dem Strom anschließen, bleiben mir fremd. Ich schätze Persönlichkeiten, die selbstständig denken, Verantwortung für ihre Überzeugungen übernehmen und ihren eigenen, von Fairness getragenen Weg gehen.
+      </p>
+    </div>
+
   </div>
 </section>
 
