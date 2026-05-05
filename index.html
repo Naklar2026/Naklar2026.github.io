@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Echte Worte. Echte Songs.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -32,7 +35,7 @@ html {
 
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
     radial-gradient(circle at top left, rgba(124,58,237,0.10), transparent 32rem),
     linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 46%, #efe5da 100%);
@@ -52,6 +55,10 @@ body::before {
 
 h1, h2, h3, p {
   margin-top: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
 }
 
 p {
@@ -287,7 +294,7 @@ main {
 .values-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
+  gap: 0;
   margin-top: 24px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -300,6 +307,8 @@ main {
   min-height: 245px;
   padding: 31px;
   background: rgba(255,255,255,0.66);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -369,6 +378,10 @@ main {
   box-shadow: 0 26px 52px rgba(31,24,18,0.26);
 }
 
+.song-card:hover h3 {
+  color: #c4b5fd;
+}
+
 .cover {
   position: relative;
   overflow: hidden;
@@ -404,8 +417,9 @@ main {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.play-button:hover {
-  transform: scale(1.06);
+.play-button:hover,
+.song-card:hover .play-button {
+  transform: scale(1.14);
   background: #7c3aed;
 }
 
