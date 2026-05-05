@@ -392,9 +392,9 @@ main {
 
 .songs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
   gap: 24px;
-  margin-bottom: 90px;
+  margin-bottom: 92px;
 }
 
 .song-card {
@@ -436,6 +436,28 @@ main {
 .song-card:hover .cover img {
   transform: scale(1.035);
   opacity: 0.88;
+}
+
+.play-button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(124,58,237,0.95);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.play-button:hover,
+.song-card:hover .play-button {
+  transform: scale(1.14);
+  background: #7c3aed;
 }
 
 .song-card h3 {
@@ -644,24 +666,24 @@ article p {
   <h2 class="section-title">Was mich erfüllt</h2>
 
   <p class="fulfillment-intro">
-    Wann und wodurch empfinde ich Glück und Erfüllung?.
+    Es sind oft keine großen Dinge, sondern stille Augenblicke,
+    in denen ich spüre, dass etwas stimmt.
   </p>
 
   <div class="fulfillment-list">
     <div class="fulfillment-item">
-      <p class="point">Mit Anderen nach hartem Ringen das Ergebnis feiern.</p>
+      <p class="point">Ein Gespräch, das ehrlich ist.</p>
       <p>
-        Wenn ich mit meinen Freuden oder Mitarbeitern - nachdem wir gemeinsam Hindernisse überwunden haben - etwas erfolgreich zu Ende gebracht habe.
+        Wenn Worte nicht nur gesprochen, sondern gemeint sind.
+        Wenn man einander zuhört, ohne sofort zu urteilen.
       </p>
     </div>
 
     <div class="fulfillment-item">
       <p class="point">Musik.</p>
       <p>
-        In allen Variationen. Johann Sebastian Bach bleibt für mich der Allergrößte.
-        Die Passionen oder das Lied "Widerstehe doch der Sünde" sind nicht nur große Kunst, ihrer damaligen Zeit weit voraus.
-        Sie ergreifen mich. Gleichzeitig schätze ich Künslter, die schöpferisch, zeitlos und integer sind.
-        Bruce Springsteen und Sting sind Beispiele.
+        Sie begleitet mich seit vielen Jahren.
+        Manchmal bringt sie Erinnerungen zurück, manchmal öffnet sie neue Gedanken.
       </p>
     </div>
 
@@ -670,14 +692,15 @@ article p {
     </div>
 
     <div class="fulfillment-item">
-      <p class="point">Der frühe Morgen.</p>
+      <p class="point">Das Gefühl, gebraucht zu werden.</p>
       <p>
-        In Ruhe den Tag beginnen. Immer wieder eine Metapher für neues Leben und neue Chancen.
+        In meinem Beruf war das lange selbstverständlich.
+        Heute ist es ein leiseres, aber nicht weniger wichtiges Gefühl.
       </p>
     </div>
 
     <div class="fulfillment-item">
-      <p class="point">Guter Wein.</p>
+      <p class="point">Ein ruhiger Morgen.</p>
     </div>
 
     <div class="fulfillment-item">
@@ -714,6 +737,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="luegen-klauen.jpg" alt="Cover Lügen, Klauen und Zerstören">
+      <div class="play-button" onclick="playSong('song1')" aria-label="Lügen, Klauen und Zerstören abspielen">▶</div>
     </div>
     <h3>Lügen, Klauen und Zerstören</h3>
     <p>Mai 2026</p>
@@ -723,6 +747,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="denn-du-bleibst.jpeg" alt="Cover Denn du bleibst">
+    </div>
     <h3>Denn du bleibst</h3>
     <p>April 2025</p>
     <audio id="song2" controls><source src="denn-du-bleibst.mp3"></audio>
@@ -731,6 +756,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch">
+      <div class="play-button" onclick="playSong('song3')" aria-label="Nur ein Mensch abspielen">▶</div>
     </div>
     <h3>Nur ein Mensch</h3>
     <p>Juli 2025</p>
@@ -740,6 +766,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="armes-wuerstchen.jpg" alt="Cover Armes Würstchen">
+      <div class="play-button" onclick="playSong('song4')" aria-label="Armes Würstchen abspielen">▶</div>
     </div>
     <h3>Armes Würstchen</h3>
     <p>Juli 2025</p>
@@ -749,6 +776,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="haare-auf-den-zaehnen.jpg" alt="Cover Haare auf den Zähnen">
+      <div class="play-button" onclick="playSong('song5')" aria-label="Haare auf den Zähnen abspielen">▶</div>
     </div>
     <h3>Haare auf den Zähnen</h3>
     <p>Juli 2025</p>
@@ -758,6 +786,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="lebe.jpg" alt="Cover Lebe">
+      <div class="play-button" onclick="playSong('song6')" aria-label="Lebe abspielen">▶</div>
     </div>
     <h3>Lebe!</h3>
     <p>August 2025</p>
@@ -767,6 +796,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="fruehling.jpg" alt="Cover Frühling in Morbach">
+      <div class="play-button" onclick="playSong('song7')" aria-label="Frühling in Morbach abspielen">▶</div>
     </div>
     <h3>Frühling in Morbach</h3>
     <p>April 2026</p>
@@ -776,6 +806,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="aeppelwoi.jpg" alt="Cover Äppelwoi in Overhesse">
+      <div class="play-button" onclick="playSong('song8')" aria-label="Äppelwoi in Overhesse abspielen">▶</div>
     </div>
     <h3>Äppelwoi in Overhesse</h3>
     <p>April 2026</p>
@@ -785,6 +816,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="nur-ein-mensch-cash.jpg" alt="Cover Nur ein Mensch #2">
+      <div class="play-button" onclick="playSong('song9')" aria-label="Nur ein Mensch #2 abspielen">▶</div>
     </div>
     <h3>Nur ein Mensch #2</h3>
     <p>April 2025</p>
@@ -794,6 +826,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="ich-geb-nicht-auf.jpg" alt="Cover Ich geb nicht auf">
+      <div class="play-button" onclick="playSong('song10')" aria-label="Ich geb nicht auf abspielen">▶</div>
     </div>
     <h3>Ich geb nicht auf</h3>
     <p>Mai 2026</p>
@@ -803,6 +836,7 @@ article p {
   <div class="song-card">
     <div class="cover">
       <img src="ich-geb-nicht-auf.jpg" alt="Cover Ich geb nicht auf #2">
+      <div class="play-button" onclick="playSong('song11')" aria-label="Ich geb nicht auf #2 abspielen">▶</div>
     </div>
     <h3>Ich geb nicht auf #2</h3>
     <p>Mai 2026</p>
