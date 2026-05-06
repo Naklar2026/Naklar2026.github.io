@@ -551,3 +551,6 @@ article p {
   margin: 0 auto;
   box-sizing: border-box;
 }
+header {
+  padding: 20px 40px;
+}
