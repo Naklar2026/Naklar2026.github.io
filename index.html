@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="de">
 <head>
+<title>Echte Worte. Echte Songs.</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Echte Worte. Echte Songs.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
@@ -22,6 +21,7 @@
 
     <nav aria-label="Hauptnavigation">
       <a href="index.html" class="active">Start</a>
+      <a href="songs.html">Songs</a>
       <a href="gegenwart.html">Meine Gegenwart</a>
       <a href="vergangenheit.html">Meine Vergangenheit</a>
     </nav>
@@ -98,9 +98,7 @@
 <section class="fulfillment">
   <h2 class="section-title">Was mich erfüllt</h2>
 
-  <p class="fulfillment-intro">
-    Wann und wodurch empfinde ich Glück und Erfüllung?
-  </p>
+  <p class="fulfillment-intro">Wann und wodurch empfinde ich Glück und Erfüllung?</p>
 
   <div class="fulfillment-list">
     <div class="fulfillment-item">
@@ -135,31 +133,10 @@
 
 <section class="text-section songs-intro">
   <h2 class="section-title">Meine Songs</h2>
-
-  <p class="lead">
-    Wenn man über sein Leben reflektiert, fällt einem vieles ein.
-    Oft gibt es Augenblicke, in denen Vergangenes plötzlich wieder ganz gegenwärtig wird.
-    Aus solchen Momenten entstehen meine Songs.
-  </p>
-
-  <p>
-    Sie erzählen von Freiheit, Aufbruch und Abschied.
-    Von schönen Erfahrungen, unbequemen Begegnungen, Freundschaft, Familie und Dankbarkeit.
-  </p>
-
-  <p class="closing">
-    Und schließlich auch von der Auseinandersetzung mit dem Ende —
-    das vielleicht gar keines ist.
-  </p>
-</section>
-
-<section class="songs-preview">
-  <h2>Meine Songs</h2>
-  <p>Hier findest du meine Musik und Gedanken.</p>
-
-  <a href="songs.html" class="button">
-    Zu den Songs
-  </a>
+  <p class="lead">Wenn man über sein Leben reflektiert, fällt einem vieles ein. Oft gibt es Augenblicke, in denen Vergangenes plötzlich wieder ganz gegenwärtig wird. Aus solchen Momenten entstehen meine Songs.</p>
+  <p>Sie erzählen von Freiheit, Aufbruch und Abschied. Von schönen Erfahrungen, unbequemen Begegnungen, Freundschaft, Familie und Dankbarkeit.</p>
+  <p class="closing">Und schließlich auch von der Auseinandersetzung mit dem Ende — das vielleicht gar keines ist.</p>
+  <a href="songs.html" class="button">Zu den Songs</a>
 </section>
 
 <section>
@@ -184,24 +161,6 @@
 
 </main>
 
-<script>
-function toggleSongInfo(button) {
-  const currentInfo = button.nextElementSibling;
-  const isOpen = currentInfo.classList.contains("open");
-  const allInfos = document.querySelectorAll(".song-info");
-  const allButtons = document.querySelectorAll(".song-info-toggle");
-
-  allInfos.forEach(info => info.classList.remove("open"));
-  allButtons.forEach(btn => btn.textContent = "Zur Entstehung");
-
-  if (!isOpen) {
-    currentInfo.classList.add("open");
-    button.textContent = "Schließen";
-  }
-}
-</script>
-  <!-- update -->
-  
 <script src="script.js"></script>
 </body>
 </html>

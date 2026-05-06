@@ -1,42 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Songs</title>
-
-  <link rel="stylesheet" href="style.css">
+<title>Meine Songs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">
-    <h1>Echte Worte. Echte Songs.</h1>
-    <p>Lothar Schweigerer</p>
+<header>
+  <div class="header-inner">
+    <div class="site-title">
+      <h2>Echte Worte. Echte Songs.</h2>
+      <p class="site-name">Lothar Schweigerer</p>
+    </div>
+
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html">Start</a>
+      <a href="songs.html" class="active">Songs</a>
+      <a href="gegenwart.html">Meine Gegenwart</a>
+      <a href="vergangenheit.html">Meine Vergangenheit</a>
+    </nav>
   </div>
+</header>
 
-  <nav>
-    <a href="index.html">Start</a>
-    <a href="songs.html">Songs</a>
-  </nav>
-<header class="songs-header">
-
-<section class="songs-section">
-  <h1>Meine Songs</h1>
+<main class="songs-page">
+  <section class="text-section">
+    <h1 class="section-title">Meine Songs</h1>
+    <p class="lead">Hier findest du meine Songs mit Musik und den Gedanken zu ihrer Entstehung.</p>
+  </section>
 
   <div class="songs-grid">
-
-    <!
-<div class="songs-grid">
-
   <div class="song-card">
     <div class="cover">
       <img src="images/luegen-klauen.jpg" alt="Cover Lügen, Klauen und Zerstören">
     </div>
     <h3>Lügen, Klauen und Zerstören</h3>
     <p>Mai 2026</p>
-    <audio controls><source src="audio/luegen-klauen.mp3"></audio>
+    <audio controls><source src="audio/luegen-klauen.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Es beschäftigt mich, warum Menschen zulassen, dass Verbrecher, Intriganten und Opportunisten Einfluss gewinnen. Zu oft geschieht es schleichend und zu lange bleibt es unwidersprochen. Das lässt mich nicht kalt. Es macht mich wütend.</p>
@@ -49,7 +54,7 @@
     </div>
     <h3>Denn du bleibst</h3>
     <p>April 2025</p>
-    <audio controls><source src="audio/denn-du-bleibst.mp3"></audio>
+    <audio controls><source src="audio/denn-du-bleibst.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>In diesem Song geht es um Leben und Sterben. Ich setze mich bewusst mit meinem eigenen Ende auseinander.</p>
@@ -65,7 +70,7 @@
     </div>
     <h3>Nur ein Mensch</h3>
     <p>Juli 2025</p>
-    <audio controls><source src="audio/nur-ein-mensch-cash.mp3"></audio>
+    <audio controls><source src="audio/nur-ein-mensch-cash.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>In diesem Song geht es um Menschen, die sich über Äußerlichkeiten definieren. Vielleicht, weil im Inneren etwas fehlt.</p>
@@ -82,7 +87,7 @@
     </div>
     <h3>Armes Würstchen</h3>
     <p>Juli 2025</p>
-    <audio controls><source src="audio/armes-wuerstchen.mp3"></audio>
+    <audio controls><source src="audio/armes-wuerstchen.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song entstand aus Erfahrungen mit Menschen in Führungspositionen, die ihrer Aufgabe menschlich nicht gewachsen waren.</p>
@@ -98,7 +103,7 @@
     </div>
     <h3>Haare auf den Zähnen</h3>
     <p>Juli 2025</p>
-    <audio controls><source src="audio/haare-auf-den-zaehnen.mp3"></audio>
+    <audio controls><source src="audio/haare-auf-den-zaehnen.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song geht auf eine prägende Zeit während meiner Chefarzttätigkeit zurück. Früh wurde ich gewarnt: „Sie hat Haare auf den Zähnen.“ Erst im Laufe der Zusammenarbeit habe ich verstanden, was das bedeutet.</p>
@@ -113,7 +118,7 @@
     </div>
     <h3>Lebe!</h3>
     <p>August 2025</p>
-    <audio controls><source src="audio/lebe.mp3"></audio>
+    <audio controls><source src="audio/lebe.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song ist aus meiner wiederkehrenden Beschäftigung mit dem eigenen Ende entstanden. Oft sitze ich draußen, schaue in die Sterne und staune über die Größe und Schönheit des Universums.</p>
@@ -130,7 +135,7 @@
     </div>
     <h3>Frühling in Morbach</h3>
     <p>April 2026</p>
-    <audio controls><source src="audio/fruehling.mp3"></audio>
+    <audio controls><source src="audio/fruehling.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song führt zurück in meine frühe Kindheit. Es sind oft ganz einfache Momente, die sich tief einprägen.</p>
@@ -145,7 +150,7 @@
     </div>
     <h3>Äppelwoi in Overhesse</h3>
     <p>April 2026</p>
-    <audio controls><source src="audio/aeppelwoi.mp3"></audio>
+    <audio controls><source src="audio/aeppelwoi.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song führt zurück in meine Studentenzeit, eine Phase voller Leichtigkeit und Unbeschwertheit. Mein Freund Luigi und ich zogen oft bis spät in die Nacht durch die Kneipen.</p>
@@ -160,7 +165,7 @@
     </div>
     <h3>Nur ein Mensch #2</h3>
     <p>April 2025</p>
-    <audio controls><source src="audio/nur-ein-mensch2.mp3"></audio>
+    <audio controls><source src="audio/nur-ein-mensch2.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>In diesem Song geht es um Menschen, die sich über Äußerlichkeiten definieren. Vielleicht, weil im Inneren etwas fehlt.</p>
@@ -176,7 +181,7 @@
     </div>
     <h3>Ich geb nicht auf</h3>
     <p>Mai 2026</p>
-    <audio controls><source src="audio/ich-geb-nicht-auf.mp3"></audio>
+    <audio controls><source src="audio/ich-geb-nicht-auf.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song ist aus Erfahrungen mit Menschen entstanden, die mich unterschätzt oder in Frage gestellt haben. Widerstand hat bei mir immer auch Hartnäckigkeit ausgelöst – den Wunsch, standzuhalten und den eigenen Weg weiterzugehen.</p>
@@ -192,7 +197,7 @@
     </div>
     <h3>Ich geb nicht auf #2</h3>
     <p>Mai 2026</p>
-    <audio controls><source src="audio/ich-geb-nicht-auf-2.mp3"></audio>
+    <audio controls><source src="audio/ich-geb-nicht-auf-2.mp3" type="audio/mpeg"></audio>
     <button class="song-info-toggle" onclick="toggleSongInfo(this)">Zur Entstehung</button>
     <div class="song-info">
       <p>Dieser Song ist aus Erfahrungen mit Menschen entstanden, die mich unterschätzt oder in Frage gestellt haben. Widerstand hat bei mir immer auch Hartnäckigkeit ausgelöst – den Wunsch, standzuhalten und den eigenen Weg weiterzugehen.</p>
@@ -200,13 +205,9 @@
       <p>Deshalb steht im Zentrum dieses Songs ein einfacher Satz: Ihr kriegt mich nicht. Ich geb nicht auf.</p>
     </div>
   </div>
-
-</div>-- SONGS HIER EINFÜGEN -->
-
   </div>
-</section>
+</main>
 
 <script src="script.js"></script>
-
 </body>
 </html>
