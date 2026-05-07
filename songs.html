@@ -246,6 +246,13 @@
 
 </main>
 
-<script src="script.js"></script>
+<script>
+  function toggleSongInfo(button) {
+    const card = button.closest(".song-card");
+    const info = card.querySelector(".song-info");
+
+    info.classList.toggle("open");
+  }
+</script>
 </body>
 </html>
