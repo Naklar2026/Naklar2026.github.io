@@ -576,3 +576,29 @@ article p {
     grid-template-columns: 1fr;
   }
 }
+.story-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  max-width: 720px;
+}
+
+.story-list li {
+  margin-bottom: 14px;
+}
+
+.story-list a {
+  display: block;
+  padding: 14px 18px;
+  background: #f3eee6;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #2b211c;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.story-list a:hover {
+  background: #e6dccf;
+  transform: translateX(4px);
+}
