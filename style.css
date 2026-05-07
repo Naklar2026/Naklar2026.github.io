@@ -53,3 +53,31 @@
   opacity: 1;
   transform: translateX(2px);
 }
+.story-cards {
+  max-width: 620px !important;
+}
+
+.story-card {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 9px 12px !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-bottom: 1px solid #d8cfc3 !important;
+}
+
+.story-card img {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+}
+
+.story-card span {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
+
+.story-card::after {
+  font-size: 15px !important;
+}
