@@ -395,4 +395,52 @@ section {
     width: 62px;
     height: 62px;
   }
+  /* SONGS-SEITE */
+
+.songs-grid,
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.song-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.2rem;
+}
+
+.song-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+
+.song-card h2,
+.song-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.song-card p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.song-card audio {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .songs-grid,
+  .song-grid {
+    grid-template-columns: 1fr;
+  }
+}
 }
