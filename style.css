@@ -548,50 +548,24 @@ audio {
 
 .story-card {
   display: grid;
-  grid-template-columns: 58px 1fr auto;
+  grid-template-columns: 58px auto 24px;
   align-items: center;
   gap: 18px;
+
   padding: 12px 18px 12px 14px;
+  min-height: 84px;
+
   border-radius: 18px;
+
   background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(90,72,54,0.10);
+
+  border: 1px solid rgba(90,72,54,0.08);
+
   text-decoration: none;
   color: #1f1d1a;
-  box-shadow: 0 8px 22px rgba(66,48,31,0.055);
+
+  box-shadow: 0 6px 18px rgba(66,48,31,0.05);
+
   transition: all 0.22s ease;
-}
-
-.story-card::after {
-  content: "→";
-  color: #6f3fd6;
-  font-size: 20px;
-  font-weight: 700;
-  opacity: 0.45;
-  transition: all 0.22s ease;
-}
-
-.story-card:hover {
-  transform: translateX(4px);
-  background: rgba(255,255,255,0.92);
-  box-shadow: 0 14px 30px rgba(66,48,31,0.09);
-}
-
-.story-card:hover::after {
-  opacity: 1;
-  transform: translateX(3px);
-}
-
-.story-card img {
-  width: 58px;
-  height: 58px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 2px solid rgba(255,255,255,0.9);
-}
-
-.story-card span {
-  font-size: 1.02rem;
-  font-weight: 700;
-  line-height: 1.35;
 }
 }
