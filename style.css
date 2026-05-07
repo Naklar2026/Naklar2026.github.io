@@ -1,36 +1,76 @@
+:root {
+  --bg: #f3eee6;
+  --text: #171717;
+  --muted: #665d54;
+  --line: #d7cab9;
+  --soft: #e5dacb;
+  --soft-active: #d4c3ae;
+  --card: rgba(255, 255, 255, 0.48);
+}
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: #f3eee6;
-  color: #171717;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER */
+
+header,
+main,
+.hero,
 .page {
   width: min(100% - 40px, 1120px);
-  margin: 0 auto;
-  padding: 2rem 0 5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.site-header {
-  margin-bottom: 3rem;
+header {
+  padding: 2rem 0 3rem;
 }
 
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.site-title h2,
 .site-title {
   margin: 0;
   font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
+.site-name,
 .site-subtitle {
-  margin: 0.1rem 0 1.3rem;
-  color: #6f655b;
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
 }
 
+nav,
 .nav,
 .category-nav {
   display: flex;
@@ -38,35 +78,204 @@ body {
   gap: 0.7rem;
 }
 
+nav a,
 .nav a,
 .category-nav a {
   text-decoration: none;
-  color: #2a2a2a;
-  background: #e4d9cc;
+  background: var(--soft);
+  color: #282522;
   padding: 0.55rem 1rem;
   border-radius: 999px;
+  font-size: 0.98rem;
 }
 
+nav a:hover,
 .nav a:hover,
 .nav a.active,
 .category-nav a:hover {
-  background: #d6c7b5;
+  background: var(--soft-active);
 }
 
+/* HERO STARTSEITE */
+
 .hero {
-  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+  padding-bottom: 4rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--muted);
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.8rem, 6vw, 4.6rem);
-  line-height: 1;
-  letter-spacing: -0.06em;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
 }
 
+.hero-lead,
 .hero p {
-  margin: 1.2rem 0 1.6rem;
+  margin: 1.2rem 0 0;
   font-size: 1.25rem;
+  color: #27231f;
+}
+
+/* PROFILKARTE */
+
+.profile-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 1.4rem;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.profile-top img {
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.profile-label {
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ALLGEMEINE SEKTIONEN */
+
+section {
+  margin: 5rem 0;
+}
+
+.section-title {
+  margin: 0 0 1.2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+}
+
+.lead,
+.values-intro,
+.fulfillment-intro {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+/* VALUES */
+
+.values-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.values-mark {
+  display: inline-block;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.value,
+.fulfillment-item,
+.posts article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 1.4rem;
+}
+
+.value h3,
+.posts h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+.value p,
+.posts p,
+.fulfillment-item p {
+  margin: 0;
+}
+
+/* FULFILLMENT */
+
+.fulfillment-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.point {
+  font-weight: 700;
+  margin-bottom: 0.35rem !important;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--text);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+}
+
+/* RUBRIKEN */
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-link article:hover {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+/* VERGANGENHEIT-SEITE */
+
+.page {
+  padding-bottom: 5rem;
+}
+
+.page .site-header {
+  width: auto;
+  padding: 2rem 0 3rem;
+}
+
+.page .hero {
+  width: auto;
+  display: block;
+  padding-bottom: 1rem;
+  margin-bottom: 4rem;
+}
+
+.page .hero h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
 }
 
 .story-section {
@@ -80,12 +289,13 @@ body {
   gap: 2rem;
   padding-bottom: 1.1rem;
   margin-bottom: 1.2rem;
-  border-bottom: 2px solid #d4c8ba;
+  border-bottom: 2px solid var(--line);
 }
 
 .story-section-header h2 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
   letter-spacing: -0.05em;
 }
 
@@ -107,14 +317,14 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 1.15rem 0;
-  border-bottom: 1px solid #d4c8ba;
+  border-bottom: 1px solid var(--line);
   color: inherit;
   text-decoration: none;
 }
 
 .story-link span {
   font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -131,7 +341,7 @@ body {
 
 .placeholder {
   max-width: 760px;
-  color: #51483f;
+  color: var(--muted);
 }
 
 .placeholder h3 {
@@ -146,26 +356,43 @@ body {
 .site-footer {
   margin-top: 5rem;
   padding-top: 2rem;
-  border-top: 1px solid #d4c8ba;
-  color: #766b60;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
-@media (max-width: 700px) {
+/* MOBILE */
+
+@media (max-width: 800px) {
   body {
     font-size: 16px;
   }
 
+  header,
+  main,
+  .hero,
   .page {
     width: min(100% - 28px, 1120px);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .values-header,
+  .values-grid,
+  .posts {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-top img {
+    width: 86px;
+    height: 86px;
   }
 
   .story-section-header img {
     width: 62px;
     height: 62px;
-  }
-
-  .story-link {
-    padding: 1rem 0;
   }
 }
