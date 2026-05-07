@@ -1,386 +1,148 @@
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.chapter-title.with-image span {
-  flex: 1;
-}
+  <title>Vergangenheit – Naklar2026</title>
 
-.chapter-image {
-  width: 65px;
-  height: 65px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-left: 20px;
-  opacity: 0.95;
-  object-position: center top;
-}
-
-.chapter-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 30px;
-}
-
-.chapter-nav a {
-  text-decoration: none;
-  background: #e7ddd1;
-  padding: 8px 14px;
-  border-radius: 12px;
-  color: #333;
-  font-size: 14px;
-  transition: 0.2s;
-}
-
-.chapter-nav a:hover {
-  background: #d8cfc3;
-}
-
-.post {
-  background: white;
-  padding: 30px;
-  border-radius: 22px;
-  margin: 60px 0;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-}
-
-.post h3 {
-  margin-top: 0;
-  font-size: 24px;
-}
-
-.post-date {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 18px;
-}
-
-.post-text {
-  line-height: 1.8;
-  font-size: 18px;
-}
-
-.post-text p {
-  margin: 0 0 1.4rem;
-}
-
-.image-caption {
-  font-size: 0.92rem;
-  color: #777;
-  line-height: 1.6;
-}
-
-.post-image {
-  width: 100%;
-  border-radius: 14px;
-  margin: 15px 0 28px;
-  display: block;
-}
-
-.image-pair {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 15px 0 28px;
-}
-
-.image-pair img {
-  width: 100%;
-  border-radius: 14px;
-  display: block;
-}
-
-.post-link {
-  text-decoration: none;
-  color: black;
-}
-
-.post-link:hover {
-  text-decoration: underline;
-}
-.story-cards {
-  max-width: 680px;
-  margin: 28px 0 70px;
-}
-
-.story-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 0;
-  border-bottom: 1px solid #d8cfc3;
-  text-decoration: none;
-  color: #1f1d1a;
-}
-
-.story-card img {
-  width: 46px;
-  height: 46px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.story-card span {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.story-card::after {
-  content: "→";
-  margin-left: auto;
-  color: #8d6ce8;
-}
-@media(max-width:700px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  nav a {
-    margin-left: 0;
-    margin-right: 15px;
-  }
-
-  .image-pair {
-    grid-template-columns: 1fr;
-  }
-  .station-title {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #333;
-}
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div>
-    <strong>Echte Worte. Echte Songs.</strong><br>
-    Lothar Schweigerer
+  <div class="page">
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+      <h1 class="site-title">Naklar2026</h1>
+
+      <p class="site-subtitle">
+        Erinnerungen, Geschichten und Fragmente eines Lebens.
+      </p>
+
+      <nav class="nav">
+        <a href="index.html">Start</a>
+        <a href="vergangenheit.html" class="active">Vergangenheit</a>
+        <a href="gegenwart.html">Gegenwart</a>
+        <a href="zukunft.html">Zukunft</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <h1>Vergangenheit</h1>
+
+      <p>
+        Orte, Stimmen, Gerüche und Momente, die geblieben sind.
+      </p>
+
+      <div class="category-nav">
+        <a href="#kindheit">Kindheit</a>
+        <a href="#jugend">Jugend</a>
+        <a href="#spaeter">Später</a>
+      </div>
+
+    </section>
+
+    <!-- KINDHEIT -->
+
+    <section class="story-section" id="kindheit">
+
+      <div class="story-section-header">
+
+        <h2>Kindheit</h2>
+
+        <img src="images/kindheit.jpg" alt="Kindheit">
+
+      </div>
+
+      <div class="story-list">
+
+        <a class="story-link" href="geschichte1.html">
+          <img src="images/story1.jpg" alt="">
+          <span>Der Hof hinter den Garagen</span>
+        </a>
+
+        <a class="story-link" href="geschichte2.html">
+          <img src="images/story2.jpg" alt="">
+          <span>Die langen Sommerabende</span>
+        </a>
+
+        <a class="story-link" href="geschichte3.html">
+          <img src="images/story3.jpg" alt="">
+          <span>Der Geruch von Kohle im Winter</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- JUGEND -->
+
+    <section class="story-section" id="jugend">
+
+      <div class="story-section-header">
+
+        <h2>Jugend</h2>
+
+        <img src="images/jugend.jpg" alt="Jugend">
+
+      </div>
+
+      <div class="placeholder">
+
+        <h3>Noch im Aufbau</h3>
+
+        <p>
+          Dieser Abschnitt wird später mit Geschichten ergänzt.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- SPÄTER -->
+
+    <section class="story-section" id="spaeter">
+
+      <div class="story-section-header">
+
+        <h2>Später</h2>
+
+        <img src="images/spaeter.jpg" alt="Später">
+
+      </div>
+
+      <div class="placeholder">
+
+        <h3>Noch im Aufbau</h3>
+
+        <p>
+          Weitere Erinnerungen folgen.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+      <p>
+        © Naklar2026
+      </p>
+
+    </footer>
+
   </div>
-
-  <nav>
-<a href="index.html">Start</a>
-<a href="gegenwart.html">Meine Gegenwart</a>
-<a href="vergangenheit.html">Meine Vergangenheit</a>
-<a href="songs.html">Meine Songs</a>
-  </nav>
-</header>
-
-<main>
-
-<h1>Meine Vergangenheit</h1>
-<p>Memoiren, Erinnerungen und Lebensgeschichten.</p>
-
-<div class="chapter-nav">
-  <a href="#kindheit">Kindheit</a>
-  <a href="#jugend">Jugend</a>
-  <a href="#arbeit">Arbeit & Leben</a>
-  <a href="#familie">Familie</a>
-  <a href="#musik">Musik</a>
-  <a href="#bleibt">Was geblieben ist</a>
-</div>
-
-  <h2 id="kindheit" class="chapter-title with-image">
-  <span>Kindheit</span>
-  <img src="images/kindheit.jpg" class="chapter-image" alt="Kindheit">
-</h2>
-
-<div class="story-list">
-
-  <a class="story-card" href="kindheit-kreidler.html">
-    <img src="images/kindheit-vater.jpg" alt="">
-    <span>Mit der Kreidler zum Frühschoppen nach Wenigerath</span>
-  </a>
-
-  <a class="story-card" href="kindheit-locken.html">
-    <img src="images/locken-vorher.jpg" alt="">
-    <span>Von Locken und richtigen Jungen</span>
-  </a>
-
-  <a class="story-card" href="kindheit-hausbrand.html">
-    <img src="images/kindheit-hausbrand-weyand.jpg" alt="">
-    <span>Hausbrand in der Nachbarschaft</span>
-  </a>
-
-  <a class="story-card" href="kindheit-schuing-gamm.html">
-    <img src="images/kindheit-amis-panzer.jpg" alt="">
-    <span>Schuing Gamm! Schuing Gamm!</span>
-  </a>
-
-  <a class="story-card" href="kindheit-sonntage-im-sommer.html">
-    <img src="images/kindheit-sonntag-dorfleben.jpg" alt="">
-    <span>Sonntage im Sommer</span>
-  </a>
-
-</div>
-
-
-<h2 id="jugend" class="chapter-title with-image">
-  <span>Jugend</span>
-  <img src="images/jugend.jpeg" class="chapter-image" alt="Jugend">
-</h2>
-
-<div class="post">
-  <h3>
-    <a href="jugend-erste-wege.html" class="post-link">Die ersten eigenen Wege</a>
-  </h3>
-  <p class="post-date">ca. 1985</p>
-
-  <div class="post-text">
-    <p>Hier beginnt ein neuer Abschnitt meines Lebens.</p>
-    <p>Die Welt wurde größer und unübersichtlicher.</p>
-  </div>
-</div>
-
-<h2 id="arbeit" class="chapter-title with-image">
-  <span>Arbeit und Leben</span>
-  <img src="images/arbeit.jpg" class="chapter-image" alt="Arbeit und Leben">
-</h2>
-  <h3 class="station-title">Studium in Gießen (1973 bis 1980)</h3>
-
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Forschung in Gießen (1980 bis 1984)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Forschung in San Francisco (1984 bis 1987)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Facharztausbildung in Heidelberg (1987 bis 1994)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Oberarzt in Marburg (1994 bis 1997)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Oberarzt in Essen (1997 bis 2002)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Chefarzt und Ordinarius in Göttingen (2002 bis 2006)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Chefarzt in Berlin (2006 bis 2019)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Chefarzt in Frankfurt / Oder (2019 bis 2021)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<h3 class="station-title">Berater bei Medudoc (2021 bis 2025)</h3>
-  
-<div class="post">
-  <div class="post-text">
-    <p>Hier kommt deine Geschichte oder Erinnerung...</p>
-  </div>
-</div>
-
-<div class="post">
-  <h3>Mein Weg</h3>
-  <p class="post-date">–</p>
-
-  <div class="post-text">
-    <p>Hier kannst du deinen beruflichen Weg beschreiben.</p>
-    <p>Was dich geprägt hat und was geblieben ist.</p>
-  </div>
-</div>
-
-<h2 id="familie" class="chapter-title with-image">
-  <span>Liebe, Familie, Verluste</span>
-  <img src="images/familie.jpg" class="chapter-image" alt="Familie">
-</h2>
-
-<div class="post">
-  <h3>Menschen, die wichtig waren</h3>
-  <p class="post-date">–</p>
-
-  <div class="post-text">
-    <p>Hier geht es um Nähe, Beziehungen und Abschiede.</p>
-    <p>Um das, was trägt – und das, was fehlt.</p>
-  </div>
-</div>
-
-<h2 id="musik" class="chapter-title with-image">
-  <span>Musik und Schreiben</span>
-  <img src="images/musik.jpg" class="chapter-image" alt="Musik und Schreiben">
-</h2>
-
-<div class="post">
-  <h3>Wie alles begann</h3>
-  <p class="post-date">–</p>
-
-  <div class="post-text">
-    <p>Irgendwann wurden Gedanken zu Worten – und Worte zu Liedern.</p>
-    <p>Es war kein Plan, sondern ein Bedürfnis.</p>
-  </div>
-</div>
-
-<h2 id="bleibt" class="chapter-title with-image">
-  <span>Was geblieben ist</span>
-  <img src="images/bleibt.jpg" class="chapter-image" alt="Was geblieben ist">
-</h2>
-
-<div class="post">
-  <h3>Ein Blick zurück</h3>
-  <p class="post-date">heute</p>
-
-  <div class="post-text">
-    <p>Wenn ich zurückblicke, sehe ich viele Wege.</p>
-    <p>Nicht alles ist geblieben – aber manches trägt bis heute.</p>
-  </div>
-</div>
-
-</main>
 
 </body>
 </html>
