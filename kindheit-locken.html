@@ -8,25 +8,37 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .story-images {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
+.story-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-    .story-images img {
-      width: 48%;
-      border-radius: 8px;
-    }
+.story-images img {
+  width: 48%;
+  border-radius: 12px;
+}
 
-    @media (max-width: 700px) {
-      .story-images img {
-        width: 100%;
-      }
-    }
+.left-image {
+  align-self: flex-start;
+}
+
+.right-image {
+  align-self: flex-end;
+}
+
+@media (max-width: 700px) {
+  .story-images {
+    display: block;
+  }
+
+  .story-images img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
 
     .back-link {
       margin-top: 40px;
@@ -69,17 +81,14 @@
 
     <p>Schon von weitem sah ich meine beiden Schwestern am Fenster stehen. Je näher ich kam, desto deutlicher wurden ihre Gesichter. Zunächst waren sie nur erstaunt. Doch dann erkannte ich mehr und mehr Entsetzen und Schmerz: Ihr blonder Engel war verschwunden. Jetzt stand da ein ganz gewöhnlicher Junge.</p>
 
-    <p>Mir war das egal. Für mich begann nun das Leben als Mann ...</p>
+   <p>Mir war das egal. Für mich begann nun das Leben als Mann ...</p>
 
-  </div>
+<div class="story-images">
+  <img class="left-image" src="Images/locken-vorher.jpg" alt="Vorher mit Locken">
+  <img class="right-image" src="Images/locken-nachher.jpg" alt="Nach dem Friseurbesuch">
+</div>
 
-  <div class="story-images">
-    <img src="Images/locken-vorher.jpg" alt="Vorher mit Locken">
-    <img src="Images/locken-nachher.jpg" alt="Nach dem Friseurbesuch">
-  </div>
-
-  <div class="back-link">
-    <p><a href="vergangenheit.html">← Zurück zu Meine Vergangenheit</a></p>
+<p><a href="vergangenheit.html">← Zurück zu Meine Vergangenheit</a></p>
   </div>
 
 </main>
