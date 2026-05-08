@@ -1,86 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Schuing Gamm! Schuing Gamm!</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    .story-images {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .story-images img {
-      width: 48%;
-      border-radius: 12px;
-    }
-
-    @media (max-width: 700px) {
-      .story-images img {
-        width: 100%;
-      }
-    }
-
-    .back-link {
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Start</a>
-  <a href="gegenwart.html">Meine Gegenwart</a>
-  <a href="vergangenheit.html">Meine Vergangenheit</a>
-  <a href="songs.html">Songs</a>
-</nav>
+<div class="page">
 
-<main>
+  <header>
+    <div class="header-inner">
 
-  <h1>Schuing Gamm! Schuing Gamm!</h1>
+      <div class="site-title">
+        <h2>Echte Worte. Echte Songs.</h2>
+        <p class="site-name">Lothar Schweigerer</p>
+      </div>
 
-  <div class="story-images">
-    <img src="images/kindheit-amis-panzer.jpg" alt="Amerikanische Panzer in der Bernkasteler Straße">
-    <img src="images/kindheit-gasthaus-rahn.jpg" alt="Aufgang zum Gasthaus Rahn">
-  </div>
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="gegenwart.html">Meine Gegenwart</a>
+        <a href="vergangenheit.html">Meine Vergangenheit</a>
+        <a href="songs.html">Meine Songs</a>
+      </nav>
 
-  <div class="post-text">
+    </div>
+  </header>
 
-    <p>Meine frühesten Erinnerungen an die amerikanischen Soldaten betreffen die Zeit um das Jahr 1958. Damals waren die Besatzungskräfte zahlreich: Auf dem Wenigerather Munitionslager und dem nahegelegenen Flugplatz Hahn lebten zeitweise mehr als 10.000 amerikanische Soldaten mit ihren Familien. Deshalb gehörten Begegnungen mit ihnen zu unserem ganz normalen Alltag.</p>
+  <main>
 
-    <p>Für uns Kinder waren die Amerikaner – von uns meist schlicht „Amis“ genannt – wie Wesen aus einer anderen Welt. Menschen mit schwarzer Hautfarbe waren im Hunsrück eine Rarität, und nun begegneten sie uns als Teil dieser fremden Gemeinschaft. Die Amis hatten Deutschland befreit und wurden deshalb geschätzt und gefeiert. Doch nicht nur deshalb: Sie wirkten auf uns offen, freundlich und großzügig – Eigenschaften, die uns Hunsrückern eher fremd waren.</p>
+    <article class="story-post">
 
-    <p>Die Amis taten aber auch einiges, um diesen Eindruck zu festigen.</p>
+      <p class="eyebrow">Kindheit</p>
 
-    <p>Besonders lebhaft erinnere ich mich an Begegnungen mit den Soldaten und ihren Fahrzeugen. Manchmal hörten wir aus der Ferne den dumpfen Motorenlärm von Panzern. Zunächst leise, dann immer bedrohlicher. Wir wussten, was nun folgen würde: Sie würden von der Hunsrückhöhenstraße kommend die Bernkasteler Straße hinauf und weiter in Richtung Baumholder fahren.</p>
+      <h1>Schuing Gamm! Schuing Gamm!</h1>
 
-    <p>Also suchten wir uns den besten Platz – entweder direkt am Straßenrand oder, noch besser, auf dem Sims am Eingang zum Gasthaus von Maria Rahn. Dort waren wir den Panzerbesatzungen besonders nah.</p>
+      <p class="post-date">um 1958</p>
 
-    <p>Und dann ging es los: Mit einem Affenzahn rasten die Panzer die Straße hinauf. Aus den Auspuffrohren quoll dichter, schwarzer Rauch. Die Panzerketten rasselten und hinterließen ihre Spuren im weichen Asphalt. Der Lärm war für uns kaum auszuhalten. Gleichzeitig waren wir, gerade einmal vier Jahre alt, vollkommen fasziniert von diesem Schauspiel.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.4rem 0 1.8rem;">
 
-    <p>Die Soldaten auf den Panzern winkten uns freundlich zu. Wir winkten zurück und versuchten, den ohrenbetäubenden Lärm mit unseren Ausrufen zu übertönen. „Schuing Gamm, Schuing Gamm“ riefen wir aus vollem Halse.</p>
+        <img
+          src="images/kindheit-amis-panzer.jpg"
+          alt="Amerikanische Panzer in der Bernkasteler Straße"
+          style="width: 100%; border-radius: 22px;"
+        >
 
-    <p>Die Amis hatten ihren Spaß daran und warfen uns Streifen des begehrten „Wrigley’s Spearmint“-Kaugummis zu. Wer geschickt war und etwas Glück hatte, konnte eine dieser Köstlichkeiten ergattern. Für uns waren diese Kaugummistreifen mehr als nur eine Süßigkeit. Sie waren ein Stück Kontakt zu einer fremden, wohlhabenden Welt, die wir irgendwann selbst kennenlernen wollten.</p>
+        <img
+          src="images/kindheit-gasthaus-rahn.jpg"
+          alt="Aufgang zum Gasthaus Rahn"
+          style="width: 100%; border-radius: 22px;"
+        >
 
-    <p>Mir ist das später gelungen – und diese frühen Begegnungen haben vielleicht dazu beigetragen.</p>
+      </div>
 
-    <p>Farbfoto: Szene mit KI nachempfunden. Schwarzweiß-Foto: Original-Aufgang zum Gasthaus Rahn (Foto: Berthold Staudt).</p>
+      <div class="post-text">
 
-  </div>
+        <p>Meine frühesten Erinnerungen an die amerikanischen Soldaten betreffen die Zeit um das Jahr 1958. Damals waren die Besatzungskräfte zahlreich: Auf dem Wenigerather Munitionslager und dem nahegelegenen Flugplatz Hahn lebten zeitweise mehr als 10.000 amerikanische Soldaten mit ihren Familien. Deshalb gehörten Begegnungen mit ihnen zu unserem ganz normalen Alltag.</p>
 
-  <div class="back-link">
-    <p><a href="vergangenheit.html">← Zurück zu Meine Vergangenheit</a></p>
-  </div>
+        <p>Für uns Kinder waren die Amerikaner – von uns meist schlicht „Amis“ genannt – wie Wesen aus einer anderen Welt. Menschen mit schwarzer Hautfarbe waren im Hunsrück eine Rarität, und nun begegneten sie uns als Teil dieser fremden Gemeinschaft. Die Amis hatten Deutschland befreit und wurden deshalb geschätzt und gefeiert. Doch nicht nur deshalb: Sie wirkten auf uns offen, freundlich und großzügig – Eigenschaften, die uns Hunsrückern eher fremd waren.</p>
 
-</main>
+        <p>Die Amis taten aber auch einiges, um diesen Eindruck zu festigen.</p>
+
+        <p>Besonders lebhaft erinnere ich mich an Begegnungen mit den Soldaten und ihren Fahrzeugen. Manchmal hörten wir aus der Ferne den dumpfen Motorenlärm von Panzern. Zunächst leise, dann immer bedrohlicher. Wir wussten, was nun folgen würde: Sie würden von der Hunsrückhöhenstraße kommend die Bernkasteler Straße hinauf und weiter in Richtung Baumholder fahren.</p>
+
+        <p>Also suchten wir uns den besten Platz – entweder direkt am Straßenrand oder, noch besser, auf dem Sims am Eingang zum Gasthaus von Maria Rahn. Dort waren wir den Panzerbesatzungen besonders nah.</p>
+
+        <p>Und dann ging es los: Mit einem Affenzahn rasten die Panzer die Straße hinauf. Aus den Auspuffrohren quoll dichter, schwarzer Rauch. Die Panzerketten rasselten und hinterließen ihre Spuren im weichen Asphalt. Der Lärm war für uns kaum auszuhalten. Gleichzeitig waren wir, gerade einmal vier Jahre alt, vollkommen fasziniert von diesem Schauspiel.</p>
+
+        <p>Die Soldaten auf den Panzern winkten uns freundlich zu. Wir winkten zurück und versuchten, den ohrenbetäubenden Lärm mit unseren Ausrufen zu übertönen. „Schuing Gamm, Schuing Gamm“ riefen wir aus vollem Halse.</p>
+
+        <p>Die Amis hatten ihren Spaß daran und warfen uns Streifen des begehrten „Wrigley’s Spearmint“-Kaugummis zu. Wer geschickt war und etwas Glück hatte, konnte eine dieser Köstlichkeiten ergattern. Für uns waren diese Kaugummistreifen mehr als nur eine Süßigkeit. Sie waren ein Stück Kontakt zu einer fremden, wohlhabenden Welt, die wir irgendwann selbst kennenlernen wollten.</p>
+
+        <p>Mir ist das später gelungen – und diese frühen Begegnungen haben vielleicht dazu beigetragen.</p>
+
+        <p>Farbfoto: Szene mit KI nachempfunden. Schwarzweiß-Foto: Original-Aufgang zum Gasthaus Rahn (Foto: Berthold Staudt).</p>
+
+      </div>
+
+      <a class="button" href="vergangenheit.html#kindheit">← Zurück zu Meine Vergangenheit</a>
+
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Naklar2026</p>
+  </footer>
+
+</div>
 
 </body>
 </html>
