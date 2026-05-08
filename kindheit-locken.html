@@ -1,98 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Von Locken und richtigen Jungen</title>
-  
-  <link rel="stylesheet" href="style.css">
 
-  <style>
-.story-images {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-.story-images img {
-  width: 48%;
-  border-radius: 12px;
-}
-
-.left-image {
-  align-self: flex-start;
-}
-
-.right-image {
-  align-self: flex-end;
-}
-
-@media (max-width: 700px) {
-  .story-images {
-    display: block;
-  }
-
-  .story-images img {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-}
-
-    .back-link {
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Start</a>
-  <a href="gegenwart.html">Meine Gegenwart</a>
-  <a href="vergangenheit.html">Meine Vergangenheit</a>
-  <a href="songs.html">Songs</a>
-</nav>
+<div class="page">
 
-<main>
+  <header>
+    <div class="header-inner">
 
-  <h1>Von Locken und richtigen Jungen</h1>
-  <div class="story-images">
-  <img class="left-image" src="images/locken-vorher.jpg" alt="Vorher mit Locken">
-  <img class="right-image" src="images/locken-nachher.jpg" alt="Nach dem Friseurbesuch">
+      <div class="site-title">
+        <h2>Echte Worte. Echte Songs.</h2>
+        <p class="site-name">Lothar Schweigerer</p>
+      </div>
+
+      <nav aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="gegenwart.html">Meine Gegenwart</a>
+        <a href="vergangenheit.html">Meine Vergangenheit</a>
+        <a href="songs.html">Meine Songs</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <article class="story-post">
+
+      <p class="eyebrow">Kindheit</p>
+
+      <h1>Von Locken und richtigen Jungen</h1>
+
+      <p class="post-date">späte 1950er Jahre</p>
+
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.4rem 0 1.8rem;">
+
+        <img
+          src="images/locken-vorher.jpg"
+          alt="Vorher mit Locken"
+          style="width: 100%; border-radius: 22px;"
+        >
+
+        <img
+          src="images/locken-nachher.jpg"
+          alt="Nach dem Friseurbesuch"
+          style="width: 100%; border-radius: 22px;"
+        >
+
+      </div>
+
+      <div class="post-text">
+
+        <p>In Großfamilien ist es oft so: Die Erstgeborenen erhalten zunächst viel Aufmerksamkeit. Wenn sie älter werden und weiterer Nachwuchs kommt, verteilt sich diese Aufmerksamkeit auf mehrere Kinder. Gleichzeitig wächst für die Älteren die Verantwortung. Das hat seine Nachteile, aber auch Vorteile. Die Jüngeren sind für sie gewissermaßen das, was für andere ihre Spielpuppen sind – nur dass sie lebendiger und interessanter sind.</p>
+
+        <p>Ich war von sechs Geschwistern das zweitjüngste und der jüngste Junge. Meine beiden älteren Schwestern kümmerten sich liebevoll um mich – fast als wäre ich ihr eigenes Kind. Besonders mochten sie meinen blonden Lockenkopf. Für sie war ich ihr kleiner Engel.</p>
+
+        <p>Mir konnte das recht sein. Ich genoss ihre Aufmerksamkeit. Doch als ich auf die Vier zuging und mich bewusster im Spiegel betrachtete, änderte sich das. Ich fand, ich sah nicht wirklich gut aus. Mit meinen Locken glich ich eher einem Mädchen. Aber ich wollte aussehen wie ein Junge! Ich hatte mich entschieden: Die Locken müssen weg.</p>
+
+        <p>Meine Eltern fragten, wie ich mir das denn vorstellte.</p>
+
+        <p>„Ich gehe zum Friseur“, sagte ich.</p>
+
+        <p>„Und zu welchem?“</p>
+
+        <p>„Zum Eibes.“</p>
+
+        <p>Sie gaben mir ein paar Groschen und ließen mich gehen. Meine Schwestern waren entsetzt.</p>
+
+        <p>Ich machte mich auf den Weg – von der Bernkasteler Straße über den Unteren Markt bis zur Bahnhofstraße. Beim Friseur Eibes bekam ich einen „Männerschnitt“. Als ich den Stuhl verließ und mich im Spiegel sah, war ich zufrieden. So wollte ich aussehen! Ich war stolz wie Oskar und flitzte so schnell ich konnte nach Hause.</p>
+
+        <p>Schon von weitem sah ich meine beiden Schwestern am Fenster stehen. Je näher ich kam, desto deutlicher wurden ihre Gesichter. Zunächst waren sie nur erstaunt. Doch dann erkannte ich mehr und mehr Entsetzen und Schmerz: Ihr blonder Engel war verschwunden. Jetzt stand da ein ganz gewöhnlicher Junge.</p>
+
+        <p>Mir war das egal. Für mich begann nun das Leben als Mann ...</p>
+
+      </div>
+
+      <a class="button" href="vergangenheit.html#kindheit">← Zurück zu Meine Vergangenheit</a>
+
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Naklar2026</p>
+  </footer>
+
 </div>
-
-
-  <div class="post-text">
-
-    <p>In Großfamilien ist es oft so: Die Erstgeborenen erhalten zunächst viel Aufmerksamkeit. Wenn sie älter werden und weiterer Nachwuchs kommt, verteilt sich diese Aufmerksamkeit auf mehrere Kinder. Gleichzeitig wächst für die Älteren die Verantwortung. Das hat seine Nachteile, aber auch Vorteile. Die Jüngeren sind für sie gewissermaßen das, was für andere ihre Spielpuppen sind – nur dass sie lebendiger und interessanter sind.</p>
-
-    <p>Ich war von sechs Geschwistern das zweitjüngste und der jüngste Junge. Meine beiden älteren Schwestern kümmerten sich liebevoll um mich – fast als wäre ich ihr eigenes Kind. Besonders mochten sie meinen blonden Lockenkopf. Für sie war ich ihr kleiner Engel.</p>
-
-    <p>Mir konnte das recht sein. Ich genoss ihre Aufmerksamkeit. Doch als ich auf die Vier zuging und mich bewusster im Spiegel betrachtete, änderte sich das. Ich fand, ich sah nicht wirklich gut aus. Mit meinen Locken glich ich eher einem Mädchen. Aber ich wollte aussehen wie ein Junge! Ich hatte mich entschieden: Die Locken müssen weg.</p>
-
-    <p>Meine Eltern fragten, wie ich mir das denn vorstellte.</p>
-
-    <p>„Ich gehe zum Friseur“, sagte ich.</p>
-
-    <p>„Und zu welchem?“</p>
-
-    <p>„Zum Eibes.“</p>
-
-    <p>Sie gaben mir ein paar Groschen und ließen mich gehen. Meine Schwestern waren entsetzt.</p>
-
-    <p>Ich machte mich auf den Weg – von der Bernkasteler Straße über den Unteren Markt bis zur Bahnhofstraße. Beim Friseur Eibes bekam ich einen „Männerschnitt“. Als ich den Stuhl verließ und mich im Spiegel sah, war ich zufrieden. So wollte ich aussehen! Ich war stolz wie Oskar und flitzte so schnell ich konnte nach Hause.</p>
-
-    <p>Schon von weitem sah ich meine beiden Schwestern am Fenster stehen. Je näher ich kam, desto deutlicher wurden ihre Gesichter. Zunächst waren sie nur erstaunt. Doch dann erkannte ich mehr und mehr Entsetzen und Schmerz: Ihr blonder Engel war verschwunden. Jetzt stand da ein ganz gewöhnlicher Junge.</p>
-
-   <p>Mir war das egal. Für mich begann nun das Leben als Mann ...</p>
-
-
-<p><a href="vergangenheit.html">← Zurück zu Meine Vergangenheit</a></p>
-  </div>
-
-</main>
 
 </body>
 </html>
