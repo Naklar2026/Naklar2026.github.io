@@ -8,17 +8,37 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .story-image {
-      margin-top: 30px;
-      margin-bottom: 40px;
-      text-align: center;
-    }
+.story-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-    .story-image img {
-      width: 100%;
-      max-width: 950px;
-      border-radius: 12px;
-    }
+.story-images img {
+  width: 48%;
+  border-radius: 12px;
+}
+
+.left-image {
+  align-self: flex-start;
+}
+
+.right-image {
+  align-self: flex-end;
+}
+
+@media (max-width: 700px) {
+  .story-images {
+    display: block;
+  }
+
+  .story-images img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
 
     .back-link {
       margin-top: 40px;
@@ -38,7 +58,6 @@
 <main>
 
   <h1>Wallfahrten und Einkaufen in Trier</h1>
-
   <div class="story-image">
   <img class="left-image" src="images/kindheit-wallfahrten.jpg" alt="Wallfahrten und Einkaufen in Trier">
   <img class="right-image" src="images/kindheit-wallfahrten-haegin.jpg" alt="Wallfahrten und Einkaufen in Trier">
