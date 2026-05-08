@@ -552,4 +552,23 @@ section {
   .story-post {
     padding: 1.2rem;
   }
+
+  .image-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ZWEI BILDER NEBENEINANDER */
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin: 1.4rem 0 1.8rem;
+}
+
+.image-row .post-image {
+  margin: 0;
+  height: 100%;
+  object-fit: cover;
 }
