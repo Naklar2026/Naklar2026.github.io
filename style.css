@@ -560,18 +560,22 @@ section {
 
 /* ZWEI BILDER NEBENEINANDER */
 
+/* ZWEI BILDER NEBENEINANDER */
+
 .image-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
   margin: 1.4rem 0 1.8rem;
+  align-items: stretch;
 }
 
 .image-row img,
 .image-row .post-image {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   border-radius: 22px;
   margin: 0;
 }
