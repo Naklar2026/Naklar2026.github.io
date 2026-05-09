@@ -49,7 +49,7 @@ main,
 /* HEADER */
 
 header {
-  padding: 2rem 0 3rem;
+  padding: 1.6rem 0 1.8rem;
 }
 
 .header-inner {
@@ -108,10 +108,10 @@ nav a:hover,
 
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 3rem;
-  align-items: start;
-  padding-bottom: 4rem;
+  align-items: center;
+  padding: 2.5rem 0 3rem;
 }
 
 .eyebrow {
@@ -166,7 +166,7 @@ nav a:hover,
 /* ALLGEMEINE SEKTIONEN */
 
 section {
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
 
 .section-title {
