@@ -115,16 +115,13 @@ nav a:hover,
 }
 
 /* HERO */
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.82fr);
-
   gap: 2.6rem;
-
   align-items: start;
-
-  padding: 0.4rem 0 0.4rem;
-
+  padding: 0.4rem 0;
   margin-bottom: 2.8rem;
 }
 
@@ -193,6 +190,10 @@ section {
   margin-top: 7rem;
 }
 
+.story-section {
+  margin-top: 7rem;
+}
+
 .section-title {
   margin: 0 0 1.2rem;
   font-size: clamp(2rem, 3.2vw, 2.65rem);
@@ -212,9 +213,9 @@ section {
 .values-header {
   display: grid;
   grid-template-columns: 1fr 0.95fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: end;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .values-mark {
@@ -239,26 +240,6 @@ section {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.values-header {
-  display: grid;
-
-  grid-template-columns: 1fr 0.95fr;
-
-  gap: 2rem;
-
-  align-items: end;
-
-  margin-bottom: 1.8rem;
-}
-
-/* VALUES */
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.35rem;
-}
-
 .value,
 .fulfillment-item,
 .posts article {
@@ -275,6 +256,14 @@ section {
 .posts p,
 .fulfillment-item p {
   margin: 0;
+}
+
+/* VALUES */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
 }
 
 /* FULFILLMENT */
@@ -294,11 +283,8 @@ section {
 
 .story-grid {
   display: grid;
-
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
   gap: 1.1rem;
-
   margin-top: 1.4rem;
 }
 
@@ -357,10 +343,6 @@ section {
 }
 
 /* STORY LIST */
-
-.story-section {
-  margin: 3rem 0 4rem;
-}
 
 .story-section-header {
   display: flex;
@@ -567,16 +549,16 @@ section {
     font-size: clamp(3rem, 15vw, 4.4rem);
   }
 
-.values-header,
-.values-grid,
-.fulfillment-list,
-.story-grid,
-.story-list,
-.songs-grid,
-.song-grid,
-.image-row {
-  grid-template-columns: 1fr;
-}
+  .values-header,
+  .values-grid,
+  .fulfillment-list,
+  .story-grid,
+  .story-list,
+  .songs-grid,
+  .song-grid,
+  .image-row {
+    grid-template-columns: 1fr;
+  }
 
   .story-category {
     min-height: 200px;
