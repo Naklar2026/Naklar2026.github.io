@@ -440,6 +440,14 @@ section {
   margin: 0 0 0.8rem;
 }
 
+.section-intro {
+  margin: 0.7rem 0 0;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
 /* SONGS-SEITE */
 
 .songs-page .text-section {
