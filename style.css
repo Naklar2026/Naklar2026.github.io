@@ -182,7 +182,15 @@ nav a:hover,
 /* SEKTIONEN */
 
 section {
-  margin: 3rem 0;
+  margin: 4.5rem 0;
+}
+
+.fulfillment {
+  margin-top: 6rem;
+}
+
+.fulfillment + .fulfillment {
+  margin-top: 7rem;
 }
 
 .section-title {
