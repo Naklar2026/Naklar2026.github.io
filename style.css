@@ -1,3 +1,66 @@
+:root {
+  --bg: #f3eee6;
+  --text: #171717;
+  --muted: #665d54;
+  --line: #d7cab9;
+
+  --soft: #e5dacb;
+  --soft-active: #d4c3ae;
+
+  --card: rgba(255, 255, 255, 0.56);
+  --card-hover: rgba(255, 255, 255, 0.74);
+
+  --radius: 26px;
+  --page-width: 1040px;
+  --page-padding: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* GRUNDLAYOUT */
+
+header,
+main,
+.hero,
+.page,
+.songs-page {
+  width: min(calc(100% - var(--page-padding)), var(--page-width));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEADER */
+
+header {
+  padding: 2rem 0 2.2rem;
+}
+
+.header-inner {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
