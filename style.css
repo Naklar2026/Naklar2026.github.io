@@ -281,7 +281,8 @@ section {
 
 .fulfillment-list {
   display: grid;
-  gap: 1.1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
 }
 
 .point {
@@ -566,15 +567,16 @@ section {
     font-size: clamp(3rem, 15vw, 4.4rem);
   }
 
-  .values-header,
-  .values-grid,
-  .story-grid,
-  .story-list,
-  .songs-grid,
-  .song-grid,
-  .image-row {
-    grid-template-columns: 1fr;
-  }
+.values-header,
+.values-grid,
+.fulfillment-list,
+.story-grid,
+.story-list,
+.songs-grid,
+.song-grid,
+.image-row {
+  grid-template-columns: 1fr;
+}
 
   .story-category {
     min-height: 200px;
