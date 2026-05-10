@@ -182,7 +182,7 @@ nav a:hover,
 /* SEKTIONEN */
 
 section {
-  margin: 4.5rem 0;
+  margin: 3rem 0;
 }
 
 .section-title {
@@ -231,6 +231,18 @@ section {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.values-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.95fr;
+
+  gap: 2rem;
+
+  align-items: end;
+
+  margin-bottom: 1.8rem;
+}
+
 /* VALUES */
 
 .values-grid {
@@ -273,9 +285,12 @@ section {
 
 .story-grid {
   display: grid;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.35rem;
-  margin-top: 2.2rem;
+
+  gap: 1.1rem;
+
+  margin-top: 1.4rem;
 }
 
 .story-category {
