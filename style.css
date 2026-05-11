@@ -584,3 +584,12 @@ section {
     padding: 1.25rem;
   }
 }
+
+.text-link {
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
