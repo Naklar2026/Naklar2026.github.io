@@ -634,35 +634,60 @@ section {
 
 }
 
-/* AUFKLAPP-KARTEN / LEHRER */
+/* LEHRER-KARTEN */
 
-.accordion-list {
+.teacher-grid {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
-.accordion-item {
+.teacher-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.25rem 1.4rem;
+  padding: 1.5rem;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.accordion-item:hover {
+.teacher-card:hover {
   background: var(--card-hover);
   transform: translateY(-2px);
 }
 
-.accordion-item summary {
+.teacher-card summary {
   cursor: pointer;
   font-weight: 800;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  line-height: 1.35;
-  list-style-position: inside;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  list-style: none;
 }
 
-.accordion-item p {
-  margin: 1rem 0 0;
+.teacher-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.teacher-card summary::after {
+  content: "＋";
+  float: right;
   color: var(--muted);
+}
+
+.teacher-card[open] summary::after {
+  content: "−";
+}
+
+.teacher-card p {
+  margin-top: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Handy */
+
+@media (max-width: 768px) {
+
+  .teacher-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
