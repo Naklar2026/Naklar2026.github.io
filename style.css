@@ -571,10 +571,16 @@ section {
 
 /* Songs auf Mobilgeräten kompakter */
 
-.songs-grid,
-.song-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+/* Songs auf größeren Handys zweispaltig */
+
+@media (min-width: 600px) and (max-width: 800px) {
+
+  .songs-grid,
+  .song-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
 }
 
   .story-category {
