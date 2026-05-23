@@ -694,3 +694,12 @@ section {
   }
 
 }
+
+/* iPhone SE und kleine Smartphones: Songs immer einspaltig */
+
+@media (max-width: 599px) {
+  .songs-grid,
+  .song-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
