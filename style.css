@@ -632,7 +632,9 @@ section {
     height: auto;
   }
 
-  /* AUFKLAPP-KARTEN */
+}
+
+/* AUFKLAPP-KARTEN / LEHRER */
 
 .accordion-list {
   display: grid;
@@ -643,7 +645,13 @@ section {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.2rem 1.4rem;
+  padding: 1.25rem 1.4rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.accordion-item:hover {
+  background: var(--card-hover);
+  transform: translateY(-2px);
 }
 
 .accordion-item summary {
@@ -651,10 +659,10 @@ section {
   font-weight: 800;
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.35;
+  list-style-position: inside;
 }
 
 .accordion-item p {
   margin: 1rem 0 0;
   color: var(--muted);
-}
 }
