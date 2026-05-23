@@ -565,6 +565,8 @@ section {
 .fulfillment-list,
 .story-grid,
 .story-list,
+.songs-grid,
+.song-grid,
 .image-row {
   grid-template-columns: 1fr;
 }
