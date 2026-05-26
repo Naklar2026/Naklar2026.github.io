@@ -411,15 +411,21 @@ main {
   min-height: 58vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
   padding: 6rem 8vw 4rem;
 }
 
 .kindheit-header {
-  background:
+  background-image:
     linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
     url("images/kindheit-header.jpeg");
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #e8dfd3;
 }
 
 .story-header {
@@ -492,4 +498,14 @@ main {
 .button {
   display: inline-block;
   margin: 1.5rem 0 2rem;
+}
+.jugend-header {
+  background-image:
+    linear-gradient(rgba(20, 18, 15, 0.25), rgba(20, 18, 15, 0.55)),
+    url("images/jugend.jpeg");
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #e8dfd3;
 }
