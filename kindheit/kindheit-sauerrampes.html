@@ -1,64 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sauerrampes an der Gotterbach · Lothar Schweigerer</title>
+  <title>Sauerrampes an der Gotterbach</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=10">
 </head>
 
 <body>
 
-  <nav class="topnav">
-    <a href="../index.html">Start</a>
-    <a href="../kindheit.html">Kindheit</a>
-    <a href="../jugend.html">Jugend</a>
-    <a href="../arbeit-leben.html">Lebensweg</a>
-    <a href="../gegenwart.html">Gegenwart</a>
-    <a href="../was-geblieben-ist.html">Was geblieben ist</a>
-    <a href="../songs.html">Musik</a>
-  </nav>
+<div class="page">
 
-  <header class="story-header" style="background-image:
-linear-gradient(rgba(20,18,15,0.25), rgba(20,18,15,0.58)),
-url('../images/kindheit-sauerrampes-header.jpg');">
+  <header>
+    <div class="header-inner">
+      <div class="site-title">
+        <h2>Echte Worte. Echte Songs.</h2>
+        <p class="site-name">Lothar Schweigerer</p>
+      </div>
 
-    <div class="hero-overlay">
-
-      <h1>Sauerrampes an der Gotterbach</h1>
-
-      <p class="hero-subtitle">
-        Sommerwiesen, Kinderstreifzüge und der säuerliche Geschmack einer Kindheit.
-      </p>
-
+      <nav aria-label="Hauptnavigation">
+        <a href="../index.html">Meine Person</a>
+        <a href="../gegenwart.html">Meine Gegenwart</a>
+        <a href="../vergangenheit.html">Meine Vergangenheit</a>
+        <a href="../songs.html">Meine Songs</a>
+      </nav>
     </div>
-
   </header>
 
   <main>
+    <article class="story-post">
 
-    <section class="geschichte-text">
+      <p class="eyebrow">Kindheit</p>
+      <h1>Sauerrampes an der Gotterbach</h1>
+      <p class="post-date">Ende der 1950er Jahre</p>
 
-      <div class="content">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.4rem 0 1.8rem; align-items: stretch;">
+
+  <img
+    src="../images/kindheit-sauerrampes.jpg"
+    alt="Sauerrampes an der Gotterbach"
+    style="width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: cover; border-radius: 22px; margin: 0;"
+  >
+
+  <img
+    src="../images/kindheit-sauerrampes-kinder.jpg"
+    alt="Kinder an der Gotterbach"
+    style="width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: cover; border-radius: 22px; margin: 0;"
+  >
+
+</div>
+
+      <div class="post-text">
 
         <p>Es war Ende der 1950er Jahre – einer dieser Sommer, die uns endlos erschienen und in denen die Tage sich weit nach hinten dehnten. Für uns Kinder schien die Zeit manchmal stillzustehen, zumindest solange nichts geschah. Doch wenn wir uns trafen und gemeinsam etwas unternahmen, dann vergingen die Tage wie im Flug.</p>
 
         <p>Von der Bernkasteler Straße aus war es nur ein kurzer Weg hinaus in die Natur – vielleicht hundert Meter. Vorbei an der Schreinerei Ertz, zwischen der Gerberei und der Kohlehandlung von Ernst Weyand, führte der schmale Pfad entlang des Morbach, der im Dorf von allen „die Gotterbach“ genannt wurde. Kaum hatten wir die letzten Häuser hinter uns gelassen, öffnete sich die Landschaft. Hinter uns lag das Dorf, vor uns die weite, warme Sommerwelt.</p>
 
         <p>Direkt hinter der Gerberei lag eine Viehweide. Das Braunvieh stand träge in der Sonne, bewegte sich gemächlich oder lag wiederkäuend im Gras. Manchmal blieben wir stehen und beobachteten die Tiere. Einfach so.</p>
-
-        <div class="story-image">
-          <img src="../images/kindheit-sauerrampes-kinder.jpg" alt="Kinder an der Gotterbach">
-        </div>
 
         <p>Meist waren wir zu viert unterwegs: Heiner und seine Schwester, meine kleine Schwester und ich. Gemeinsam streiften wir durch die Wiesen, die sich farbenfroh vor uns ausbreiteten. Vor uns, fast am Horizont, glitzerte die Dhron in der Nachmittagssonne, während sich weiter oben die Hunsrückhöhenstraße durch die Landschaft zog. Nur selten unterbrach das leise Tuckern eines Autos die Stille, wenn jemand über die holprige Bernkasteler Straße hinaus in Richtung Dreieck fuhr.</p>
 
@@ -70,44 +73,16 @@ url('../images/kindheit-sauerrampes-header.jpg');">
 
       </div>
 
-    </section>
+      <a class="button" href="../vergangenheit.html#kindheit">← Zurück zu Meine Vergangenheit</a>
 
-    <section class="weiterlesen">
-
-      <div class="content">
-
-        <h2>Weitere Erinnerungen</h2>
-
-        <div class="weiter-grid">
-
-          <a href="kindheit-sommer-schwimmbad.html">
-            <span>Sommer im Schwimmbad</span>
-          </a>
-
-          <a href="kindheit-gotterbach.html">
-            <span>Abenteuer an der Gotterbach</span>
-          </a>
-
-          <a href="kindheit-waldhaus.html">
-            <span>Waldhäuschen</span>
-          </a>
-
-        </div>
-
-        <div class="story-back">
-          <a href="../kindheit.html">← Zurück zur Kindheit</a>
-        </div>
-
-      </div>
-
-    </section>
-
+    </article>
   </main>
 
-  <footer class="footer">
-    <p>© Lothar Schweigerer · Lebensreise</p>
+  <footer class="site-footer">
+    <p>© Naklar2026</p>
   </footer>
 
-</body>
+</div>
 
+</body>
 </html>

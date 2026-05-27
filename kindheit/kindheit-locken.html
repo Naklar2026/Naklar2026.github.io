@@ -1,60 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Von Locken und richtigen Jungen · Lothar Schweigerer</title>
+  <title>Von Locken und richtigen Jungen</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../style.css">
-
+  <link rel="stylesheet" href="../style.css?v=10">
 </head>
 
 <body>
 
-  <nav class="topnav">
-    <a href="../index.html">Start</a>
-    <a href="../kindheit.html">Kindheit</a>
-    <a href="../jugend.html">Jugend</a>
-    <a href="../arbeit-leben.html">Lebensweg</a>
-    <a href="../gegenwart.html">Gegenwart</a>
-    <a href="../was-geblieben-ist.html">Was geblieben ist</a>
-    <a href="../songs.html">Musik</a>
-  </nav>
+<div class="page">
 
-<header class="story-header" style="background-image:
-linear-gradient(rgba(20,18,15,0.25), rgba(20,18,15,0.58)),
-url('../images/kindheit-locken-vorher-header.jpg');">
+  <header>
+    <div class="header-inner">
 
-    <div class="hero-overlay">
+      <div class="site-title">
+        <h2>Echte Worte. Echte Songs.</h2>
+        <p class="site-name">Lothar Schweigerer</p>
+      </div>
 
-      <h1>Von Locken und richtigen Jungen</h1>
-
-      <p class="hero-subtitle">
-        Wie ein kleiner Friseurbesuch das Ende eines blonden Engels einläutete.
-      </p>
+      <nav aria-label="Hauptnavigation">
+        <a href="../index.html">Meine Person</a>
+        <a href="../gegenwart.html">Meine Gegenwart</a>
+        <a href="../vergangenheit.html">Meine Vergangenheit</a>
+        <a href="../songs.html">Meine Songs</a>
+      </nav>
 
     </div>
-
   </header>
 
   <main>
 
-    <section class="geschichte-text">
+    <article class="story-post">
 
-      <div class="content">
+      <p class="eyebrow">Kindheit</p>
 
-        <div class="story-image-grid">
+      <h1>Von Locken und richtigen Jungen</h1>
 
+      <p class="post-date">späte 1950er Jahre</p>
 
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin: 1.4rem 0 1.8rem;">
 
-        </div>
+        <img
+          src="../images/locken-vorher.jpg"
+          alt="Vorher mit Locken"
+          style="width: 100%; border-radius: 22px;"
+        >
+
+        <img
+          src="../images/locken-nachher.jpg"
+          alt="Nach dem Friseurbesuch"
+          style="width: 100%; border-radius: 22px;"
+        >
+
+      </div>
+
+      <div class="post-text">
 
         <p>In Großfamilien ist es oft so: Die Erstgeborenen erhalten zunächst viel Aufmerksamkeit. Wenn sie älter werden und weiterer Nachwuchs kommt, verteilt sich diese Aufmerksamkeit auf mehrere Kinder. Gleichzeitig wächst für die Älteren die Verantwortung. Das hat seine Nachteile, aber auch Vorteile. Die Jüngeren sind für sie gewissermaßen das, was für andere ihre Spielpuppen sind – nur dass sie lebendiger und interessanter sind.</p>
 
@@ -74,54 +82,23 @@ url('../images/kindheit-locken-vorher-header.jpg');">
 
         <p>Ich machte mich auf den Weg – von der Bernkasteler Straße über den Unteren Markt bis zur Bahnhofstraße. Beim Friseur Eibes bekam ich einen „Männerschnitt“. Als ich den Stuhl verließ und mich im Spiegel sah, war ich zufrieden. So wollte ich aussehen! Ich war stolz wie Oskar und flitzte so schnell ich konnte nach Hause.</p>
 
-        <div class="story-image">
-          <img src="../images/kindheit-locken-nachher.jpg" alt="Nach dem Friseurbesuch">
-        </div>
-
         <p>Schon von weitem sah ich meine beiden Schwestern am Fenster stehen. Je näher ich kam, desto deutlicher wurden ihre Gesichter. Zunächst waren sie nur erstaunt. Doch dann erkannte ich mehr und mehr Entsetzen und Schmerz: Ihr blonder Engel war verschwunden. Jetzt stand da ein ganz gewöhnlicher Junge.</p>
 
         <p>Mir war das egal. Für mich begann nun das Leben als Mann ...</p>
 
       </div>
 
-    </section>
+      <a class="button" href="../vergangenheit.html#kindheit">← Zurück zu Meine Vergangenheit</a>
 
-    <section class="weiterlesen">
-
-      <div class="content">
-
-        <h2>Weitere Erinnerungen</h2>
-
-        <div class="weiter-grid">
-
-          <a href="kindheit-advent-kindergarten.html">
-            <span>Advent im Kindergarten</span>
-          </a>
-
-          <a href="kindheit-kreidler-vater.html">
-            <span>Mit der Kreidler zum Frühschoppen nach Wenigerath</span>
-          </a>
-
-          <a href="kindheit-opel.html">
-            <span>Der Opel Kapitän</span>
-          </a>
-
-        </div>
-
-        <div class="story-back">
-          <a href="../kindheit.html">← Zurück zur Kindheit</a>
-        </div>
-
-      </div>
-
-    </section>
+    </article>
 
   </main>
 
-  <footer class="footer">
-    <p>© Lothar Schweigerer · Lebensreise</p>
+  <footer class="site-footer">
+    <p>© Naklar2026</p>
   </footer>
 
-</body>
+</div>
 
+</body>
 </html>
